@@ -1,7 +1,31 @@
-#plant-index{
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans|Marck+Script|Raleway+Dots|Kurale);
+
+.jumbotron {
+  background: linear-gradient(-9deg, #D9CAA9, transparent),
+              url(../img/botanical-radish.jpg) no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 400px;
+  border-bottom: 18px solid #2C5225;
+}
+.jumbotron h1 {
+  color: #630947;
+  font-family: 'Kurale', serif;
+  font-weight: 900;
+  padding-top: 100px;
+  font-size: 7em;
+}
+body {
+  margin-bottom: 20%;
+  background-color: #CCC1A7;
+  background: linear-gradient(-15deg, #DBC693, transparent)
+}
+
+#plant-index {
   float: left;
-  border: solid 3px black;
-  margin: 20px 50px 20px 50px;
+  border: solid 3px #630947;
+  border-radius: 25px;
+  margin: 20px 50px 20px 20px;
   padding-right: 40px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -10,5 +34,14 @@
 #plant-index ul {
   list-style-type: none;
   font-size: 2em;
+  color: #524C11
+}
+#plant-index li:hover {
+  text-decoration: underline;
+  color: grey;
+}
+
+.body-content {
+  color: #524C11;
 
 }
