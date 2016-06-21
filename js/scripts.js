@@ -116,8 +116,14 @@ function myFriend(choice) {
 };
 
 
-var plantFriends = ["tomato", "bean-pole", "marigold"];
-var plantFriendsTwo = ["kale", "onion", "pixieflower"];
+var plantFriends = ["tomato", "bean-pole", "marigold", "peas", "radish"];
+var plantFriendsTwo = ["kale", "onion", "peas", "brussel sprouts", "garlic", "cabbage"];
+var plantFriendsThree = ["califlower", "artichoke", "beets", "lettuce", "tomato"];
+var plantFriendsFour = ["cucumber", "basil", "marigold", "onion"];
+var plantFriendsFive = ["asparagus", "basil", "marigold", "parsley"];
+var plantFriendsSix = ["carrots", "lettuce", "sage", "radish", "beets"];
+var plantFriendsSeven = ["spinach", "kale", "onion", "thyme"];
+var plantFriendsEight = ["carrots", "parsley", "leeks", "cabbage", "garlic"];
 
 
 $(document).ready(function(){
