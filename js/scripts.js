@@ -98,24 +98,26 @@ var marigoldPlant = {
 //   plantMaintanence: "low",
 //   plantTime: "late summer"
 // }
+// var dropDownChoice = ;
 
-// var myFriend = function(){
-//   for ( i = 0 ; i < plantFriends.length ; i++ ) {
-//     if ($(".DROPDOWN").val() === plantFriends[i] ){
-//       var removed = plantFriends.splice(i, 0);
-//       return plantFriends;
-//     } else if ($".DROPDOWN".val() === plantFriendsTwo[i] ){
-//       var removed = plantFriendsTwo.splice(i,0);
-//     }
-//   }
-//   });
+
+function myFriend(choice) {
+  console.log(choice);
+  debugger;
+  for ( var i = 0 ; i < plantFriends.length ; i++ ) {
+    if (choice === plantFriends[i] ){
+      plantFriends.splice(i, 1);
+      alert(plantFriends);
+    }
+    // else if ($("#dropdown1").val() === plantFriendsTwo[i] ){
+    //   var removed = plantFriendsTwo.slice(i, 0);
+    //   alert(plantFriendsTwo);
+  // }
+  }
+};
 
 var plantFriends = ["tomato", "bean-pole", "marigold"];
-var plantFriendsTwo = ["", "", ""]
-
-// Plant.prototype.plantFacts = function() {
-//   return "please give this " + this.plantName + " about " + plantSpace
-// }
+var plantFriendsTwo = ["kale", "onion", "pixieflower"];
 
 $(document).ready(function(){
 
@@ -128,17 +130,22 @@ $(document).ready(function(){
     $(".time").text(beanPolePlant.time);
     $("#plant-modal").modal("show");
   });
-// ON CLICK INDEX FUNCTION
+// FOR IN STATEMENT TO POPULATE MODAL USING A PROTOTYPE(spitData) EQUATION IS BELOW, BUT IT DOESNT WORK AS A PROTOTYPE YET
   // $("#bean-pole").click(function(event){
   //   event.preventDefault();
   //   for (var prop in beanPolePlant) {
   //     $("#plant-properties").append(prop, ": ", beanPolePlant[prop], "<br>");
   //   }
-
   // });
 
 // Plant.prototype.spitData = function () {
 //
 // };
 
+  $("#dropdown1").change(function(event){
+    var myChoice = $("#dropdown1").val();
+    // debugger;
+    console.log(myChoice);
+    myFriend(myChoice);
+  });
 });
