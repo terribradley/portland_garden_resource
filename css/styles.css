@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans|Marck+Script|Raleway+Dots|Kurale);
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans|Lato|Marck+Script|Raleway+Dots|Kurale);
 
 .jumbotron {
   background: linear-gradient(-9deg, #D9CAA9, transparent),
@@ -41,8 +41,21 @@ body {
   color: grey;
 }
 #plant-modal {
-  margin:0 auto;
-  width: 40%;
+  margin: 20% 10% 20% 30%;
+  background-image: url(../img/root.jpeg);
+}
+.modal-title {
+  font-family: 'Lato';
+  text-align: center;
+  font-size: 2em;
+}
+.modal-body {
+  font-family: 'Lato';
+  text-align: center;
+  font-size: 2em;
+}
+.modal-admin {
+  width: 80%;
 }
 
 .body-content {
