@@ -12,19 +12,30 @@
 
 _Web page that delivers information on garden plants and can match plants to user input._
 
+## Setup/Installation Requirements
+
+* _Go to GitHub_
+* _clone or download the pizza Repository onto desktop_
+* _Open Html file in chosen browser_
+
 
 ## Specifications
 
 Page load.
 Show clickable index of plants.
 
-* _Deliver information on click of list of plant names._  
-  **_Example Input: User clicks Tomato in index._**
-  **_Output Input: Information on tomato plants is displayed._**
+**Deliver information on click of list of plant names.**
 
-* _User clicks on plant from index list, App offer plants compatible with user choice. (Or do we have a separate list for companion app?)_**
-  **_Input: tomato_**
-  **_Output: tobacco?_**
+*Example Input: User clicks Tomato in index.*
+*Output Input: Information on tomato plants is displayed.*
+
+**User inputs a desired garden bed size and a box representing that size appears on screen**
+*Example Input: User enters 8ft by 6ft into a form*
+*Example Output: BOX that has a ratio of 8x6*
+
+**User clicks on plant from index list, App offer plants compatible with user choice. (Or do we have a separate list for companion app?)**
+  *Input: tomato*
+  *Output: Marigold, Asparagus*
 
 * _Deliver plants that match user parameters._
   **_Example Input: User chooses 4ft from Space property in Companion Growing app._**
@@ -36,7 +47,7 @@ Show clickable index of plants.
 ## Support and contact details
 
 
-_Contact alexd.jacks@gmail.com, terribradley3@gmail.com, juliasemail mwilkin22@gmail.com, or 
+_Contact alexd.jacks@gmail.com, terribradley3@gmail.com, julia.dickey@gmail.com, mwilkin22@gmail.com, or
 with questions regarding this software. Check out some of these resources to understand the technologies._
 
 

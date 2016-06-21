@@ -1,0 +1,14 @@
+#plant-index{
+  float: left;
+  border: solid 3px black;
+  margin: 20px 50px 20px 50px;
+  padding-right: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+#plant-index ul {
+  list-style-type: none;
+  font-size: 2em;
+
+}
