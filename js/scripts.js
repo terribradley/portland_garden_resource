@@ -1,7 +1,6 @@
 // backend
-function Plant(sunlight, time, ) {
-  // , time, space, care, color
-  // this.plantName = name;
+function Plant(name, sunlight, time, space, maintenance) {
+  this.plantName = name;
   this.plantSun = sunlight;
   // this.plantType = type;
   this.plantTime = time;
@@ -20,12 +19,12 @@ function Plant(sunlight, time, ) {
 //   plantTime: "spring"
 // }
 var beanPolePlant = {
-  plantName: "bean-pole",
-  plantSun: "full sun",
-  plantType: "vegetable",
-  plantSpace: "2 plants per foot",
-  plantMaintanence: "low",
-  plantTime: "spring"
+  name: "bean-pole",
+  sun: "full sun",
+  type: "vegetable",
+  space: "2 plants per foot",
+  maintenance: "low",
+  time: "spring"
 }
 // var beetPlant = {
 //   plantName: "beets",
@@ -100,15 +99,16 @@ var marigoldPlant = {
 //   plantTime: "late summer"
 // }
 
-var myFriend = function();
-  for ( i = 0 ; i < plantFriends.length ; i++ ) {
-    if ($(".DROPDOWN").val() === plantFriends[i] ){
-      var removed = plantFriends.splice(i, 0);
-      return plantFrinds;
-    } else if ($".DROPDOWN".val() === plantFriendsTwo[i] ){
-      var removed = plantFriendsTwo.splice(i,0);
-    }
-  }
+// var myFriend = function(){
+//   for ( i = 0 ; i < plantFriends.length ; i++ ) {
+//     if ($(".DROPDOWN").val() === plantFriends[i] ){
+//       var removed = plantFriends.splice(i, 0);
+//       return plantFriends;
+//     } else if ($".DROPDOWN".val() === plantFriendsTwo[i] ){
+//       var removed = plantFriendsTwo.splice(i,0);
+//     }
+//   }
+//   });
 
 var plantFriends = ["tomato", "bean-pole", "marigold"];
 var plantFriendsTwo = ["", "", ""]
@@ -121,12 +121,24 @@ $(document).ready(function(){
 
   $("#bean-pole").click(function(event){
     event.preventDefault();
-    $(".modal-plant-title").text(beanPolePlant.plantName);
-    $(".sun").text(this.plantTime);
-    $(".time").text(this.plantTime);
+    $(".modal-plant-title").text(beanPolePlant.name);
+    $(".sun").text(beanPolePlant.sun);
+    $(".space").text(beanPolePlant.space);
+    $(".maintenance").text(beanPolePlant.maintenance);
+    $(".time").text(beanPolePlant.time);
     $("#plant-modal").modal("show");
   });
+// ON CLICK INDEX FUNCTION
+  // $("#bean-pole").click(function(event){
+  //   event.preventDefault();
+  //   for (var prop in beanPolePlant) {
+  //     $("#plant-properties").append(prop, ": ", beanPolePlant[prop], "<br>");
+  //   }
+
+  // });
+
+// Plant.prototype.spitData = function () {
+//
+// };
 
 });
-
-//
