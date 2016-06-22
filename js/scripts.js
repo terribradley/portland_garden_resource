@@ -18,6 +18,7 @@ var asparagus = new Plant ("asparagus", "Partial sun", "Spring", "1 plant per fo
 var allPlants = [ beans, asparagus ];
 
 var chosenPlantObject;
+var indexPlantObject;
 
 // THIS FUCKING WORKS!!!!! INPUT USER STRING FROM CLICK, RETURNS OBJECT OF THE VEGGIE CHOSEN
 function searchForPlantObject(inputName){
@@ -180,18 +181,25 @@ function box2Populate (arrayofFriends){
 // var plantFriendsEight = ["carrots", "parsley", "leeks", "cabbage", "garlic"];
 
 $(document).ready(function(){
-// USER CLICKS ON BEAN POLE
-  $("#bean-pole").click(function(event){
+// USER CLICKS ON VEGGIE, IDENTIFIES HTML VALUE
+  $("ul.clicked li").click(function(event){
     event.preventDefault();
+    debugger;
+    var indexPlant = this.textContent;
 
-// SENDS PLANT INFO TO MODAL
-    $(".modal-plant-title").text(beanPolePlant.name);
-    $(".sun").text(beanPolePlant.sunlight);
-    $(".space").text(beanPolePlant.space);
-    $(".maintenance").text(beanPolePlant.maintenance);
-    $(".time").text(beanPolePlant.time);
+    var indexPlantObject = searchForPlantObject(indexPlant);
+
+    $(".modal-plant-title").text(indexPlantObject.plantName);
+    debugger;
+    $(".sun").text(indexPlantObject.plantSun);
+    $(".space").text(indexPlantObject.plantSpace);
+    $(".maintenance").text(indexPlantObject.plantMaintenance);
+    $(".time").text(indexPlantObject.plantTime);
     $("#plant-modal").modal("show");
   });
+// SENDS PLANT INFO TO MODAL
+
+
 // FOR IN STATEMENT TO POPULATE MODAL USING A PROTOTYPE(spitData) EQUATION IS BELOW, BUT IT DOESNT WORK AS A PROTOTYPE YET
   // $("#bean-pole").click(function(event){
   //   event.preventDefault();
