@@ -11,8 +11,22 @@ function Plant(name, sunlight, time, space, maintenance, friend) {
 }
 
 // CREATES BEAN-POLE OBJECT
-var beanPolePlant = new Plant ("BEAN-POLE", "Full sun", "Spring", "2 plants per foot", "low", ["tomato", "marigold", "peas", "radish"]);
-var asparagusPlant = new Plant ("ASPARAGUS", "Partial sun", "Spring", "1 plant per foot", "Medium", ["asparagus", "basil", "marigold", "parsley"]);
+var allPlants = [ beans, asparagus ];
+
+var beans = new Plant ("beans", "Full sun", "Spring", "2 plants per foot", "low", ["tomato", "marigold", "peas", "radish"]);
+
+var asparagus = new Plant ("asparagus", "Partial sun", "Spring", "1 plant per foot", "Medium", ["asparagus", "basil", "marigold", "parsley"]);
+
+function searchForPlantObject(plantName){
+  allPlants.forEach(function(plantName) {
+debugger;
+  // for (this.name in allPlants) {
+    if (plantName === this.name) {
+      return Plant;
+    }
+  });
+  // }
+};
 
 
 // var beanPolePlant = {
@@ -100,9 +114,9 @@ var asparagusPlant = new Plant ("ASPARAGUS", "Partial sun", "Spring", "1 plant p
 var friendsOfChosen = [];
 
 Plant.prototype.myFriend = function(choice) {
-  debugger;
   for ( var i = 0 ; i < this.friend.length ; i++ ) {
     if (choice === this.friend[i] ){
+      debugger;
       friendsOfChosen.push(this.friend);
       console.log(friendsOfChosen);
     } else {
@@ -141,9 +155,14 @@ Plant.prototype.myFriend = function(choice) {
 // };
 
 function box2Populate (inputfrombox1){
+  // debugger;
+
   for ( var i = 0 ; i < inputfrombox1.length ; i++ ) {
-    $("#dropdown2").append("<option value=\"" + inputfrombox1[i] + ">" + inputfrombox1[i] + "</option>");
-  debugger;
+    var poppedFriend = inputfrombox1.pop();
+    // alert(poppedFriend);
+    poppedFriend.forEach(function(friend) {
+      $('#dropdown2').append('<option value="' + friend + '">' + friend + '</option>');
+    });
   }
 };
 
@@ -185,7 +204,9 @@ $(document).ready(function(){
     var chosenPlant = $("#dropdown1").val();
 
     debugger;
-    beanPolePlant.myFriend(chosenPlant);
+    // var chosenPlantObject =
+    searchForPlantObject(chosenPlant);
+    // chosenPlantObject.myFriend(chosenPlant);
     // myFriend(chosenPlant);
     box2Populate(friendsOfChosen);
   });
