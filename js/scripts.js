@@ -8,31 +8,26 @@ function Plant(name, sunlight, time, space, maintenance, friend) {
   this.plantMaintenance = maintenance;
   this.friend = friend;
   // this.plantColor = color;
-  allPlants.push(this);
 }
 
-// CREATES BEAN-POLE OBJECT
-var allPlants = [ beans, asparagus ];
-
+// CREATES VEGGIE OBJECTS
 var beans = new Plant ("beans", "Full sun", "Spring", "2 plants per foot", "low", ["tomato", "marigold", "peas", "radish"]);
 
 var asparagus = new Plant ("asparagus", "Partial sun", "Spring", "1 plant per foot", "Medium", ["asparagus", "basil", "marigold", "parsley"]);
 
+var allPlants = [ beans, asparagus ];
 
+var chosenPlantObject;
+
+// THIS FUCKING WORKS!!!!! INPUT USER STRING FROM CLICK, RETURNS OBJECT OF THE VEGGIE CHOSEN
 function searchForPlantObject(inputName){
-  // var plantObject;
+  debugger;
   for (var i = 0 ; i < allPlants.length ; i++){
-    debugger;
-    if (inputName === (allPlants[i][this.plantName])) {
+    if (inputName === (allPlants[i].plantName)) {
       return allPlants[i];
-      alert(allPlants[i]);
     }
   }
 };
-
-
-
-
 
 // NOT WORKING, SORTING THROUGH
 // function searchForPlantObject(plantName){
@@ -47,8 +42,7 @@ function searchForPlantObject(inputName){
 //   });
   // }
 // };
-
-
+// DETAILS ABOUT VEGGIE OBJECTS
 // var beanPolePlant = {
 //   name:"BEAN-POLES",
 //   sunlight:"Full sun",
@@ -134,16 +128,9 @@ function searchForPlantObject(inputName){
 var friendsOfChosen = [];
 
 Plant.prototype.myFriend = function(choice) {
-  for ( var i = 0 ; i < this.friend.length ; i++ ) {
-    if (choice === this.friend[i] ){
-      debugger;
-      friendsOfChosen.push(this.friend);
-      console.log(friendsOfChosen);
-    } else {
-      alert("oops! no friends found");
-    }
-  }
-};
+  debugger;
+    friendsOfChosen.push(this.friend);
+}
 
 // THIS FUNCTION WORKS TO REFERENCE THE FRIENDS
 // function myFriend(choice) {
@@ -157,7 +144,6 @@ Plant.prototype.myFriend = function(choice) {
 //     }
 //   }
 // };
-
 
 // WORKS TO REMOVE SELECTED ITEM FROM ARRAY
 // function myFriend(choice) {
@@ -174,19 +160,17 @@ Plant.prototype.myFriend = function(choice) {
 //   }
 // };
 
-function box2Populate (inputfrombox1){
-  // debugger;
-
-  for ( var i = 0 ; i < inputfrombox1.length ; i++ ) {
-    var poppedFriend = inputfrombox1.pop();
-    // alert(poppedFriend);
+function box2Populate (arrayofFriends){
+  for ( var i = 0 ; i < arrayofFriends.length ; i++ ) {
+    var poppedFriend = arrayofFriends.pop();
     poppedFriend.forEach(function(friend) {
       $('#dropdown2').append('<option value="' + friend + '">' + friend + '</option>');
     });
   }
 };
 
-var plantFriends = ["tomato", "bean-pole", "marigold", "peas", "radish"];
+// ORIGINAL FRIEND ARRAYS -- TO BE DELETED
+// var plantFriends = ["tomato", "bean-pole", "marigold", "peas", "radish"];
 // var plantFriendsTwo = ["kale", "onion", "peas", "brussel sprouts", "garlic", "cabbage"];
 // var plantFriendsThree = ["califlower", "artichoke", "beets", "lettuce", "tomato"];
 // var plantFriendsFour = ["cucumber", "basil", "marigold", "onion"];
@@ -224,8 +208,8 @@ $(document).ready(function(){
     var chosenPlant = $("#dropdown1").val();
 
     debugger;
-    // var chosenPlantObject =
-    searchForPlantObject(chosenPlant);
+
+    var chosenPlantObject = searchForPlantObject(chosenPlant);
     chosenPlantObject.myFriend(chosenPlant);
     // myFriend(chosenPlant);
     box2Populate(friendsOfChosen);
