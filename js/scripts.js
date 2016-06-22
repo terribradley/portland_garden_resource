@@ -99,22 +99,28 @@ var basilPlant = {
   time:"Late summer"
 }
 
+var newList = [];
 
 function myFriend(choice) {
-  console.log(choice);
-  debugger;
   for ( var i = 0 ; i < plantFriends.length ; i++ ) {
     if (choice === plantFriends[i] ){
       plantFriends.splice(i, 1);
-      alert(plantFriends);
+      // alert(plantFriends);
+      newList.push(plantFriends);
     }
-    // else if ($("#dropdown1").val() === plantFriendsTwo[i] ){
+    // else if ($("#dropdown1").val() === plantFriendsTwo[i] ) {
     //   var removed = plantFriendsTwo.slice(i, 0);
     //   alert(plantFriendsTwo);
-  // }
+    // }
   }
 };
 
+function box2Populate (inputfrombox1){
+  for ( var i = 0 ; i < inputfrombox1.length ; i++ ) {
+    $("#dropdown2").append("<option value=\"" + inputfrombox1[i] + ">" + inputfrombox1[i] + "</option>");
+  debugger;
+  }
+};
 
 var plantFriends = ["tomato", "bean-pole", "marigold", "peas", "radish"];
 var plantFriendsTwo = ["kale", "onion", "peas", "brussel sprouts", "garlic", "cabbage"];
@@ -124,7 +130,6 @@ var plantFriendsFive = ["asparagus", "basil", "marigold", "parsley"];
 var plantFriendsSix = ["carrots", "lettuce", "sage", "radish", "beets"];
 var plantFriendsSeven = ["spinach", "kale", "onion", "thyme"];
 var plantFriendsEight = ["carrots", "parsley", "leeks", "cabbage", "garlic"];
-
 
 $(document).ready(function(){
 
@@ -151,8 +156,7 @@ $(document).ready(function(){
 
   $("#dropdown1").change(function(event){
     var myChoice = $("#dropdown1").val();
-    // debugger;
-    console.log(myChoice);
     myFriend(myChoice);
+    box2Populate(newList);
   });
 });
