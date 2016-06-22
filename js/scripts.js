@@ -8,6 +8,7 @@ function Plant(name, sunlight, time, space, maintenance, friend) {
   this.plantMaintenance = maintenance;
   this.friend = friend;
   // this.plantColor = color;
+  allPlants.push(this);
 }
 
 // CREATES BEAN-POLE OBJECT
@@ -17,16 +18,35 @@ var beans = new Plant ("beans", "Full sun", "Spring", "2 plants per foot", "low"
 
 var asparagus = new Plant ("asparagus", "Partial sun", "Spring", "1 plant per foot", "Medium", ["asparagus", "basil", "marigold", "parsley"]);
 
-function searchForPlantObject(plantName){
-  allPlants.forEach(function(plantName) {
-debugger;
-  // for (this.name in allPlants) {
-    if (plantName === this.name) {
-      return Plant;
+
+function searchForPlantObject(inputName){
+  // var plantObject;
+  for (var i = 0 ; i < allPlants.length ; i++){
+    debugger;
+    if (inputName === (allPlants[i][this.plantName])) {
+      return allPlants[i];
+      alert(allPlants[i]);
     }
-  });
-  // }
+  }
 };
+
+
+
+
+
+// NOT WORKING, SORTING THROUGH
+// function searchForPlantObject(plantName){
+//   var plantObject;
+//   allPlants.forEach(function(plantObject) {
+//     debugger;
+//   // for (this.name in allPlants) {
+//     if (plantName === plantObject.name) {
+//       return plantObject;
+//       alert(plantObject);
+//     }
+//   });
+  // }
+// };
 
 
 // var beanPolePlant = {
@@ -206,7 +226,7 @@ $(document).ready(function(){
     debugger;
     // var chosenPlantObject =
     searchForPlantObject(chosenPlant);
-    // chosenPlantObject.myFriend(chosenPlant);
+    chosenPlantObject.myFriend(chosenPlant);
     // myFriend(chosenPlant);
     box2Populate(friendsOfChosen);
   });
