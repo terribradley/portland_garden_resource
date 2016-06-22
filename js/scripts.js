@@ -10,95 +10,94 @@ function Plant(name, sunlight, time, space, maintenance) {
 }
 
 
-// var asparagusPlant = {
-//   plantName: "asparagus",
-//   plantSun: "partial sun",
-//   plantType: "vegetable",
-//   plantSpace: "1 plant per foot",
-//   plantMaintanence: "medium",
-//   plantTime: "spring"
-// }
+var asparagusPlant = {
+  name: "ASPARAGUS",
+  sunlight: "Partial sun",
+  type: "Vegetable",
+  space: "1 plant per foot",
+  maintanence: "Medium",
+  time: "Spring"
+}
 var beanPolePlant = {
-  name: "bean-pole",
-  sun: "full sun",
-  type: "vegetable",
-  space: "2 plants per foot",
-  maintenance: "low",
-  time: "spring"
+  name:"BEAN-POLES",
+  sunlight:"Full sun",
+  type:"Vegetable",
+  space:"2 plants per foot",
+  maintenance:"Low",
+  time: "Spring"
 }
-// var beetPlant = {
-//   plantName: "beets",
-//   plantSun: "full sun",
-//   plantType: "vegetable",
-//   plantSpace: "1 plants per foot",
-//   plantMaintanence: "medium",
-//   plantTime: "early-summer"
-// }
-// var carrotPlant = {
-//   plantName: "carrot",
-//   plantSun: "partial sun",
-//   plantType: "vegetable",
-//   plantSpace: "2 plants per foot",
-//   plantMaintanence: "low",
-//   plantTime: "early-summer"
-// }
-// var kalePlant = {
-//   plantName: "kale",
-//   plantSun: "full sun",
-//   plantType: "vegetable",
-//   plantSpace: "1 plants per foot",
-//   plantMaintanence: "medium",
-//   plantTime: "spring"
-// }
-// var lettucePlant = {
-//   plantName: "lettuce",
-//   plantSun: "full sun",
-//   plantType: "vegetable",
-//   plantSpace: "2 plants per foot",
-//   plantMaintanence: "low",
-//   plantTime: "spring"
-// }
+var beetPlant = {
+  name:"BEETS",
+  sunlight:"Full sun",
+  type:"Vegetable",
+  space:"1 plants per foot",
+  maintanence:"Medium",
+  time:"Early-summer"
+}
+var carrotPlant = {
+  name:"CARROTS",
+  sunlight:"Partial sun",
+  type:"Vegetable",
+  space:"2 plants per foot",
+  maintanence:"Low",
+  time:"Early-summer"
+}
+var kalePlant = {
+  name:"KALE",
+  sunlight:"Full sun",
+  type:"Vegetable",
+  space:"1 plants per foot",
+  maintanence:"Medium",
+  time:"Spring"
+}
+var lettucePlant = {
+  name:"LETTUCE",
+  sunlight:"Full sun",
+  type:"Vegetable",
+  space:"2 plants per foot",
+  maintanence:"Low",
+  time:"Spring"
+}
 var onionPlant = {
-  plantName: "onion",
-  plantSun: "partial",
-  plantType: "vegetable",
-  plantSpace: "2 plants per foot",
-  plantMaintanence: "low",
-  plantTime: "spring"
+  name:"ONIONS",
+  sunlight:"Partial",
+  type:"Vegetable",
+  space:"2 plants per foot",
+  maintanence:"Low",
+  time:"Spring"
 }
-// var peaPlant = {
-//   plantName: "peas",
-//   plantSun: "full sun",
-//   plantType: "vegetable",
-//   plantSpace: "3 plants per foot",
-//   plantMaintanence: "low",
-//   plantTime: "spring"
-// }
+var peaPlant = {
+  name:"PEAS",
+  sunlight:"Full sun",
+  type:"Vegetable",
+  space:"3 plants per foot",
+  maintanence:"Low",
+  time:"Spring"
+}
 var tomatoPlant = {
-  plantName: "tomato",
-  plantSun: "full sun",
-  plantType: "vegetable",
-  plantSpace: "1 plants per foot",
-  plantMaintanence: "medium",
-  plantTime: "late summer"
+  name:"TOMATOES",
+  sunlight:"Full sun",
+  type:"Vegetable",
+  space:"1 plants per foot",
+  maintanence:"Medium",
+  time:"Late summer"
 }
 var marigoldPlant = {
-  plantName: "marigold",
-  plantSun: "full sun",
-  plantType: "plant",
-  plantSpace: "3 plants per foot",
-  plantMaintanence: "low",
-  plantTime: "late summer"
+  name:"MARIGOLDS",
+  sunlight:"Full sun",
+  type:"Plant",
+  space:"3 plants per foot",
+  maintanence:"Low",
+  time:"Late summer"
 }
-// var basilPlant = {
-//   plantName: "basil",
-//   plantSun: "full sun",
-//   plantType: "plant",
-//   plantSpace: "3 plants per foot",
-//   plantMaintanence: "low",
-//   plantTime: "late summer"
-// }
-// var dropDownChoice = ;
+var basilPlant = {
+  name:"BASIL",
+  sunlight:"Full sun",
+  type:"Plant",
+  space:"3 plants per foot",
+  maintanence:"Low",
+  time:"Late summer"
+}
 
 
 function myFriend(choice) {
@@ -116,15 +115,23 @@ function myFriend(choice) {
   }
 };
 
-var plantFriends = ["tomato", "bean-pole", "marigold"];
-var plantFriendsTwo = ["kale", "onion", "pixieflower"];
+
+var plantFriends = ["tomato", "bean-pole", "marigold", "peas", "radish"];
+var plantFriendsTwo = ["kale", "onion", "peas", "brussel sprouts", "garlic", "cabbage"];
+var plantFriendsThree = ["califlower", "artichoke", "beets", "lettuce", "tomato"];
+var plantFriendsFour = ["cucumber", "basil", "marigold", "onion"];
+var plantFriendsFive = ["asparagus", "basil", "marigold", "parsley"];
+var plantFriendsSix = ["carrots", "lettuce", "sage", "radish", "beets"];
+var plantFriendsSeven = ["spinach", "kale", "onion", "thyme"];
+var plantFriendsEight = ["carrots", "parsley", "leeks", "cabbage", "garlic"];
+
 
 $(document).ready(function(){
 
   $("#bean-pole").click(function(event){
     event.preventDefault();
     $(".modal-plant-title").text(beanPolePlant.name);
-    $(".sun").text(beanPolePlant.sun);
+    $(".sun").text(beanPolePlant.sunlight);
     $(".space").text(beanPolePlant.space);
     $(".maintenance").text(beanPolePlant.maintenance);
     $(".time").text(beanPolePlant.time);
