@@ -224,17 +224,36 @@ var thymePlant = {
 }
 
 // CREATES VEGGIE OBJECTS
-var beans = new Plant ("beans", "Full sun", "Spring", "2 plants per foot", "low", ["tomato", "marigold", "peas", "radish"]);
+var beans = new Plant ("beans", "Full Sun", "Spring", "2 plants per foot", "Low", ["tomato", "marigold", "peas", "radish"]);
 
-var asparagus = new Plant ("asparagus", "Partial sun", "Spring", "1 plant per foot", "Medium", ["asparagus", "basil", "marigold", "parsley"]);
+var asparagus = new Plant ("asparagus", "Partial Sun", "Spring", "1 plant per foot", "Medium", ["asparagus", "basil", "marigold", "parsley"]);
 
-var allPlants = [ beans, asparagus ];
+var beets = new Plant ("beets","Full Sun","Early-summer","1 plants per foot","Medium", );
+
+var carrots = new Plant ("carrots","Partial Sun","Early-summer","2 plants per foot","Low", );
+
+var kale = new Plant ("kale","Full Sun","Spring","1 plants per foot","Medium");
+
+var lettuce = new Plant ("lettuce","Full Sun","Spring","2 plants per foot","Low");
+
+var onions = new Plant ("onions","Partial Sun","Spring","2 plants per foot","Low");
+
+var peas = new Plant ("peas","Full Sun","Spring","3 plants per foot","Low"
+);
+
+var tomatoes = new Plant ("tomatoes","Full Sun","Late summer","1 plants per foot","Medium");
+
+var marigolds = new Plant ("marigolds","Full Sun","Late summer","3 plants per foot","Low");
+
+var basil = new Plant ("basil","Full Sun","Late summer","3 plants per foot","Low");
+
+var allPlants = [ beans, asparagus, carrots, , , , , , , , , ];
 
 var chosenPlantObject;
+var indexPlantObject;
 
 // THIS FUCKING WORKS!!!!! INPUT USER STRING FROM CLICK, RETURNS OBJECT OF THE VEGGIE CHOSEN
 function searchForPlantObject(inputName){
-  debugger;
   for (var i = 0 ; i < allPlants.length ; i++){
     if (inputName === (allPlants[i].plantName)) {
       return allPlants[i];
@@ -242,23 +261,10 @@ function searchForPlantObject(inputName){
   }
 };
 
-// NOT WORKING, SORTING THROUGH
-// function searchForPlantObject(plantName){
-//   var plantObject;
-//   allPlants.forEach(function(plantObject) {
-//     debugger;
-//   // for (this.name in allPlants) {
-//     if (plantName === plantObject.name) {
-//       return plantObject;
-//       alert(plantObject);
-//     }
-//   });
-  // }
-// };
 // DETAILS ABOUT VEGGIE OBJECTS
 // var beanPolePlant = {
 //   name:"BEAN-POLES",
-//   sunlight:"Full sun",
+//   sunlight:"Full Sun",
 //   time: "Spring",
 //   space:"2 plants per foot",
 //   maintenance:"Low",
@@ -267,7 +273,7 @@ function searchForPlantObject(inputName){
 // }
 // var beetPlant = {
 //   name:"BEETS",
-//   sunlight:"Full sun",
+//   sunlight:"Full Sun",
 //   type:"Vegetable",
 //   space:"1 plants per foot",
 //   maintanence:"Medium",
@@ -275,7 +281,7 @@ function searchForPlantObject(inputName){
 // }
 // var carrotPlant = {
 //   name:"CARROTS",
-//   sunlight:"Partial sun",
+//   sunlight:"Partial Sun",
 //   type:"Vegetable",
 //   space:"2 plants per foot",
 //   maintanence:"Low",
@@ -283,7 +289,7 @@ function searchForPlantObject(inputName){
 // }
 // var kalePlant = {
 //   name:"KALE",
-//   sunlight:"Full sun",
+//   sunlight:"Full Sun",
 //   type:"Vegetable",
 //   space:"1 plants per foot",
 //   maintanence:"Medium",
@@ -291,7 +297,7 @@ function searchForPlantObject(inputName){
 // }
 // var lettucePlant = {
 //   name:"LETTUCE",
-//   sunlight:"Full sun",
+//   sunlight:"Full Sun",
 //   type:"Vegetable",
 //   space:"2 plants per foot",
 //   maintanence:"Low",
@@ -307,7 +313,7 @@ function searchForPlantObject(inputName){
 // }
 // var peaPlant = {
 //   name:"PEAS",
-//   sunlight:"Full sun",
+//   sunlight:"Full Sun",
 //   type:"Vegetable",
 //   space:"3 plants per foot",
 //   maintanence:"Low",
@@ -315,7 +321,7 @@ function searchForPlantObject(inputName){
 // }
 // var tomatoPlant = {
 //   name:"TOMATOES",
-//   sunlight:"Full sun",
+//   sunlight:"Full Sun",
 //   type:"Vegetable",
 //   space:"1 plants per foot",
 //   maintanence:"Medium",
@@ -323,7 +329,7 @@ function searchForPlantObject(inputName){
 // }
 // var marigoldPlant = {
 //   name:"MARIGOLDS",
-//   sunlight:"Full sun",
+//   sunlight:"Full Sun",
 //   type:"Plant",
 //   space:"3 plants per foot",
 //   maintanence:"Low",
@@ -331,7 +337,7 @@ function searchForPlantObject(inputName){
 // }
 // var basilPlant = {
 //   name:"BASIL",
-//   sunlight:"Full sun",
+//   sunlight:"Full Sun",
 //   type:"Plant",
 //   space:"3 plants per foot",
 //   maintanence:"Low",
@@ -382,42 +388,24 @@ function box2Populate (arrayofFriends){
   }
 };
 
-// ORIGINAL FRIEND ARRAYS -- TO BE DELETED
-// var plantFriends = ["tomato", "bean-pole", "marigold", "peas", "radish"];
-// var plantFriendsTwo = ["kale", "onion", "peas", "brussel sprouts", "garlic", "cabbage"];
-// var plantFriendsThree = ["califlower", "artichoke", "beets", "lettuce", "tomato"];
-// var plantFriendsFour = ["cucumber", "basil", "marigold", "onion"];
-// var plantFriendsFive = ["asparagus", "basil", "marigold", "parsley"];
-// var plantFriendsSix = ["carrots", "lettuce", "sage", "radish", "beets"];
-// var plantFriendsSeven = ["spinach", "kale", "onion", "thyme"];
-// var plantFriendsEight = ["carrots", "parsley", "leeks", "cabbage", "garlic"];
-
 $(document).ready(function(){
-// USER CLICKS ON BEAN POLE
-  $("#bean-pole").click(function(event){
+// USER CLICKS ON VEGGIE, IDENTIFIES HTML VALUE
+  $("ul.clicked li").click(function(event){
     event.preventDefault();
+    debugger;
+    var indexPlant = this.textContent;
 
-// SENDS PLANT INFO TO MODAL
-    $(".modal-plant-title").text(beanPolePlant.name);
-    $(".sun").text(beanPolePlant.sunlight);
-    $(".space").text(beanPolePlant.space);
-    $(".maintenance").text(beanPolePlant.maintenance);
-    $(".time").text(beanPolePlant.time);
+    var indexPlantObject = searchForPlantObject(indexPlant);
+
+    $(".modal-plant-title").text(indexPlantObject.plantName);
+    debugger;
+    $(".sun").text(indexPlantObject.plantSun);
+    $(".space").text(indexPlantObject.plantSpace);
+    $(".maintenance").text(indexPlantObject.plantMaintenance);
+    $(".time").text(indexPlantObject.plantTime);
     $("#plant-modal").modal("show");
 
   });
-
-// FOR IN STATEMENT TO POPULATE MODAL USING A PROTOTYPE(spitData) EQUATION IS BELOW, BUT IT DOESNT WORK AS A PROTOTYPE YET
-  // $("#bean-pole").click(function(event){
-  //   event.preventDefault();
-  //   for (var prop in beanPolePlant) {
-  //     $("#plant-properties").append(prop, ": ", beanPolePlant[prop], "<br>");
-  //   }
-  // });
-
-// Plant.prototype.spitData = function () {
-//
-// };
 
 
   $("#dropdown1").change(function(event){
@@ -427,7 +415,6 @@ $(document).ready(function(){
 
     var chosenPlantObject = searchForPlantObject(chosenPlant);
     chosenPlantObject.myFriend(chosenPlant);
-    // myFriend(chosenPlant);
     box2Populate(friendsOfChosen);
   });
 });
