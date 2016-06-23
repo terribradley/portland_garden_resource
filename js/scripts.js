@@ -104,20 +104,7 @@ function box2Populate (inputfrombox1){
   for ( var i = 0 ; i < inputfrombox1.length ; i++ ) {
     var poppedFriend = inputfrombox1.pop();
 
-// WORKS TO REMOVE SELECTED ITEM FROM ARRAY
-// function myFriend(choice) {
-//   for ( var i = 0 ; i < plantFriends.length ; i++ ) {
-//     if (choice === plantFriends[i] ){
-//       plantFriends.splice(i, 1);
-//       // alert(plantFriends);
-//       newList.push(plantFriends);
-//     }
-//     // else if ($("#dropdown1").val() === plantFriendsTwo[i] ) {
-//     //   var removed = plantFriendsTwo.slice(i, 0);
-//     //   alert(plantFriendsTwo);
-//     // }
-//   }
-// };
+
 
 function box2Populate (arrayofFriends){
   for ( var i = 0 ; i < arrayofFriends.length ; i++ ) {
