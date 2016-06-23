@@ -37,6 +37,7 @@ for (i = 0; i < plantidArray.length; i ++){
 });
 
 
+<<<<<<< HEAD
 
 var spinach = new Plant ("spinach", "Partial Sun", "Late Summer", "1 plant per foot", "Medium", ["beans", "onion", "peas", "parsley"]);
 
@@ -60,24 +61,38 @@ var brussels = new Plant ("brussels", "Partial Sun", "Late Summer", "2 plant per
 
 var artichoke = new Plant ("artichoke", "Full Sun", "Early Summer", "1 plant per foot", "High", ["brussels", "califlower", "kale"]);
 
+var beets = new Plant ("beets","Full Sun","Early-summer","1 plants per foot","Medium", );
 
+var carrots = new Plant ("carrots","Partial Sun","Early-summer","2 plants per foot","Low", );
 
+var kale = new Plant ("kale","Full Sun","Spring","1 plants per foot","Medium");
 
-var allPlants = [ beans, asparagus ];
+var lettuce = new Plant ("lettuce","Full Sun","Spring","2 plants per foot","Low");
+
+var onions = new Plant ("onions","Partial Sun","Spring","2 plants per foot","Low");
+
+var peas = new Plant ("peas","Full Sun","Spring","3 plants per foot","Low"
+);
+
+var tomatoes = new Plant ("tomatoes","Full Sun","Late summer","1 plants per foot","Medium");
+
+var marigolds = new Plant ("marigolds","Full Sun","Late summer","3 plants per foot","Low");
+
+var basil = new Plant ("basil","Full Sun","Late summer","3 plants per foot","Low");
+
+var allPlants = [ beans, asparagus, carrots, , , , , , , , , ];
 
 var chosenPlantObject;
+var indexPlantObject;
 
 // THIS FUCKING WORKS!!!!! INPUT USER STRING FROM CLICK, RETURNS OBJECT OF THE VEGGIE CHOSEN
 function searchForPlantObject(inputName){
-  debugger;
   for (var i = 0 ; i < allPlants.length ; i++){
     if (inputName === (allPlants[i].plantName)) {
       return allPlants[i];
     }
   }
 };
-
-
 
 var friendsOfChosen = [];
 
@@ -116,8 +131,24 @@ function box2Populate (arrayofFriends){
   }
 };
 
-
 $(document).ready(function(){
+// USER CLICKS ON VEGGIE, IDENTIFIES HTML VALUE
+  $("ul.clicked li").click(function(event){
+    event.preventDefault();
+    debugger;
+    var indexPlant = this.textContent;
+
+    var indexPlantObject = searchForPlantObject(indexPlant);
+
+    $(".modal-plant-title").text(indexPlantObject.plantName);
+    debugger;
+    $(".sun").text(indexPlantObject.plantSun);
+    $(".space").text(indexPlantObject.plantSpace);
+    $(".maintenance").text(indexPlantObject.plantMaintenance);
+    $(".time").text(indexPlantObject.plantTime);
+    $("#plant-modal").modal("show");
+
+  });
 
   $("#dropdown1").change(function(event){
     var chosenPlant = $("#dropdown1").val();
