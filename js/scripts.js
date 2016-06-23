@@ -9,7 +9,7 @@ function Plant(name, sunlight, time, space, maintenance, friend) {
 }
 
 // VEGGIE OBJECTS
-var thyme = new Plant ("thyme", "Full Sun", "Spring", "1 plant per foot", "Low", ["brussels", "cabbage", "cauliflower","kale"]);
+var thyme = new Plant ("thyme", "Full Sun", "Spring", "1 plant per foot", "Low" ["brussels", "cabbage", "cauliflower","kale"]);
 
 var beans = new Plant ("beans", "Full Sun", "Spring", "2 plants per foot", "Low", ["tomato", "marigold", "peas", "radish"]);
 
