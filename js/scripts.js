@@ -141,7 +141,7 @@ $(document).ready(function(){
     box2Populate(friendsOfChosen);
     $("#dropdown1").hide();
     $("#dropdown2").show();
-    $("#gardenbox-one").html(chosenPlant + "<br>" + chosenPlantObject.plantSpace);
+    $("#gardenbox-one").html("<p>" + chosenPlant + "<br>" + chosenPlantObject.plantSpace + "</p>");
     // $("#gardenbox-one").text(chosenPlantObject.plantSpace);
     $("#gardenbox-one").addClass("seedling-one");
   });
@@ -152,7 +152,7 @@ $(document).ready(function(){
     box3Populate(friendsOfChosen);
     $("#dropdown2").hide();
     $("#dropdown3").show();
-    $("#gardenbox-two").html(chosenPlant + "<br>" + chosenPlantObject.plantSpace);
+    $("#gardenbox-two").html("<p>" + chosenPlant + "<br>" + chosenPlantObject.plantSpace + "</p>");
     $("#gardenbox-two").addClass("seedling-two");
   });
   $("#dropdown3").change(function(event){
@@ -162,7 +162,7 @@ $(document).ready(function(){
     box4Populate(friendsOfChosen);
     $("#dropdown3").hide();
     $("#dropdown4").show();
-    $("#gardenbox-three").html(chosenPlant + "<br>" + chosenPlantObject.plantSpace);
+    $("#gardenbox-three").html("<p>" + chosenPlant + "<br>" + chosenPlantObject.plantSpace + "</p>");
     $("#gardenbox-three").addClass("seedling-three");
   });
   $("#dropdown4").change(function(event){
@@ -172,7 +172,7 @@ $(document).ready(function(){
     box5Populate(friendsOfChosen);
     $("#dropdown4").hide();
     $("#dropdown5").show();
-    $("#gardenbox-four").html(chosenPlant + "<br>" + chosenPlantObject.plantSpace);
+    $("#gardenbox-four").html("<p>" + chosenPlant + "<br>" + chosenPlantObject.plantSpace + "</p>");
     $("#gardenbox-four").addClass("seedling-four");
   });
   $("#dropdown5").change(function(event){
@@ -182,7 +182,7 @@ $(document).ready(function(){
     box6Populate(friendsOfChosen);
     $("#dropdown5").hide();
     $("#dropdown6").show();
-    $("#gardenbox-five").html(chosenPlant + "<br>" + chosenPlantObject.plantSpace);
+    $("#gardenbox-five").html("<p>" + chosenPlant + "<br>" + chosenPlantObject.plantSpace + "</p>");
     $("#gardenbox-five").addClass("seedling-five");
   });
   $("#dropdown6").change(function(event){
@@ -190,7 +190,7 @@ $(document).ready(function(){
     var chosenPlantObject = searchForPlantObject(chosenPlant);
     chosenPlantObject.myFriend(chosenPlant);
     $("#dropdown6").hide();
-    $("#gardenbox-six").html(chosenPlant + "<br>" + chosenPlantObject.plantSpace);
+    $("#gardenbox-six").html("<p>" + chosenPlant + "<br>" + chosenPlantObject.plantSpace + "</p>");
     $("#gardenbox-six").addClass("seedling-six");
   });
 });
