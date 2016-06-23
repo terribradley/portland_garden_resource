@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather+Sans|Lato|Marck+Script|Raleway+Dots|Kurale);
 
-#resetButton {
+.button {
   display: none;
+  margin-top: 20px;
 }
 
 .jumbotron {
