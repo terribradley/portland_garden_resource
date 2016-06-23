@@ -13,7 +13,7 @@ var plantObjectArray= [artichokePlant, asparagusPlant, beanPolePlant, beetPlant,
 
 
 // VEGGIE OBJECTS
-var thyme = new Plant ("thyme", "Full Sun", "Spring", "1 plant per foot", "Low" ["brussels", "cabbage", "cauliflower","kale"]);
+var thyme = new Plant ("thyme", "Full Sun", "Spring", "1 plant per foot", "Low", ["brussels", "cabbage", "cauliflower","kale"]);
 
 var beans = new Plant ("beans", "Full Sun", "Spring", "2 plants per foot", "Low", ["tomato", "marigold", "peas", "radish"]);
 
@@ -95,6 +95,31 @@ function box3Populate (arrayofFriends){
     });
   }
 };
+function box4Populate (arrayofFriends){
+  for ( var i = 0 ; i < arrayofFriends.length ; i++ ) {
+    var poppedFriend = arrayofFriends.pop();
+    poppedFriend.forEach(function(friend) {
+      $('#dropdown4').append('<option value="' + friend + '">' + friend + '</option>');
+    });
+  }
+};
+function box5Populate (arrayofFriends){
+  for ( var i = 0 ; i < arrayofFriends.length ; i++ ) {
+    var poppedFriend = arrayofFriends.pop();
+    poppedFriend.forEach(function(friend) {
+      $('#dropdown5').append('<option value="' + friend + '">' + friend + '</option>');
+    });
+  }
+};
+function box6Populate (arrayofFriends){
+  for ( var i = 0 ; i < arrayofFriends.length ; i++ ) {
+    var poppedFriend = arrayofFriends.pop();
+    poppedFriend.forEach(function(friend) {
+      $('#dropdown6').append('<option value="' + friend + '">' + friend + '</option>');
+    });
+  }
+};
+
 
 $(document).ready(function(){
 // USER CLICKS ON VEGGIE, IDENTIFIES HTML VALUE
@@ -133,5 +158,43 @@ $(document).ready(function(){
     $("#dropdown3").show();
     $("#gardenbox-two").text(chosenPlant);
     $("#gardenbox-two").addClass("seedling-two");
+  });
+  $("#dropdown3").change(function(event){
+    var chosenPlant = $("#dropdown3").val();
+    var chosenPlantObject = searchForPlantObject(chosenPlant);
+    chosenPlantObject.myFriend(chosenPlant);
+    box4Populate(friendsOfChosen);
+    $("#dropdown3").hide();
+    $("#dropdown4").show();
+    $("#gardenbox-three").text(chosenPlant);
+    $("#gardenbox-three").addClass("seedling-three");
+  });
+  $("#dropdown4").change(function(event){
+    var chosenPlant = $("#dropdown4").val();
+    var chosenPlantObject = searchForPlantObject(chosenPlant);
+    chosenPlantObject.myFriend(chosenPlant);
+    box5Populate(friendsOfChosen);
+    $("#dropdown4").hide();
+    $("#dropdown5").show();
+    $("#gardenbox-four").text(chosenPlant);
+    $("#gardenbox-four").addClass("seedling-four");
+  });
+  $("#dropdown5").change(function(event){
+    var chosenPlant = $("#dropdown5").val();
+    var chosenPlantObject = searchForPlantObject(chosenPlant);
+    chosenPlantObject.myFriend(chosenPlant);
+    box6Populate(friendsOfChosen);
+    $("#dropdown5").hide();
+    $("#dropdown6").show();
+    $("#gardenbox-five").text(chosenPlant);
+    $("#gardenbox-five").addClass("seedling-five");
+  });
+  $("#dropdown6").change(function(event){
+    var chosenPlant = $("#dropdown6").val();
+    var chosenPlantObject = searchForPlantObject(chosenPlant);
+    chosenPlantObject.myFriend(chosenPlant);
+    $("#dropdown6").hide();
+    $("#gardenbox-six").text(chosenPlant);
+    $("#gardenbox-six").addClass("seedling-six");
   });
 });
