@@ -57,7 +57,6 @@ var basil = new Plant ("basil","Full Sun","Late Summer","3 plants per foot","Low
 
 var allPlants = [artichoke, asparagus, beans, beets, brussels, cabbage, carrots, cauliflower, garlic, kale, leeks, lettuce, onions, peas, radish, spinach, tomato, parsley, sage, basil, marigold, thyme, cucumber];
 
-
 var chosenPlantObject;
 var indexPlantObject;
 var friendsOfChosen = [];
@@ -70,7 +69,6 @@ function searchForPlantObject(inputName) {
     }
   }
 };
-
 // FINDS ARRAY OF FRIENDS
 Plant.prototype.myFriend = function(choice) {
   friendsOfChosen.push(this.friend);
@@ -116,9 +114,7 @@ function box6Populate (arrayofFriends){
     });
   }
 };
-
 // <<<< FRONT END LOGIC >>>>
-
 $(document).ready(function(){
 // USER CLICKS ON VEGGIE, IDENTIFIES HTML VALUE
   $("ul.clicked li").click(function(event){
@@ -134,7 +130,6 @@ $(document).ready(function(){
     $(".companions").text(indexPlantObject.friend.join(', '));
     $("#plant-modal").modal("show");
   });
-
 // COMPANION PLANTER FUNCTIONALITY
   $("#dropdown1").change(function(event){
     var chosenPlant = $("#dropdown1").val();
@@ -144,7 +139,6 @@ $(document).ready(function(){
     $("#dropdown1").hide();
     $("#dropdown2").show();
     $("#gardenbox-one").html("<p>" + chosenPlant + "<br>" + chosenPlantObject.plantSpace + "</p>");
-    // $("#gardenbox-one").text(chosenPlantObject.plantSpace);
     $("#gardenbox-one").addClass("seedling-one");
   });
   $("#dropdown2").change(function(event){
