@@ -19,7 +19,7 @@ function Plant(name, sunlight, time, space, maintenance, friend) {
 
 var plantidArray=["artichoke", "asparagus","bean-pole","beet", "brussel-sprout", "cabbage", "carrot", "cauliflower", "cucumber", "garlic", "kale", "leek", "lettuce", "onion", "pea", "radish", "spinach", "tomato", "parsley", "sage", "thyme", "marigold" ];
 
-var plantObjectArray= [artichokePlant, asparagusPlant, beanPolePlant, beetPlant, brusselPlant, cabbagePlant, carrotPlant, cauliflowerPlant, cumcumberPlant, garlicPlant, kalePlant, leekPlant, lettucePlant, onionPlant, peaPlant, radishPlant, spinachPlant, tomatoPlant, parsleyPlant, sagePlant, thymePlant, marigoldPlant];
+var plantObjectArray= [artichokePlant, asparagusPlant, beanPolePlant, beetPlant, brusselPlant, cabbagePlant, carrotPlant, cauliflowerPlant, , garlicPlant, kalePlant, leekPlant, lettucePlant, onionPlant, peaPlant, radishPlant, spinachPlant, tomatoPlant, parsleyPlant, sagePlant, thymePlant, marigoldPlant];
 
 var plantClick = (function(id, plantObject) {
 $(id).click(function() {
@@ -35,198 +35,31 @@ for (i = 0; i < plantidArray.length; i ++){
 }
 });
 });
-var asparagusPlant = {
-  name: "ASPARAGUS",
-  sunlight: "Partial sun",
-  time: "Spring",
-  space: "1 plant per foot",
-  maintenance: "Medium",
-}
-var beanPolePlant = {
-  name:"BEAN-POLES",
-  sunlight:"Full sun",
-  type:"Vegetable",
-  space:"2 plants per foot",
-  maintenance:"Low",
-  time: "Spring"
-}
-var beetPlant = {
-  name:"BEETS",
-  sunlight:"Full sun",
-  type:"Vegetable",
-  space:"1 plants per foot",
-  maintanence:"Medium",
-  time:"Early-summer"
-}
-var carrotPlant = {
-  name:"CARROTS",
-  sunlight:"Partial sun",
-  type:"Vegetable",
-  space:"2 plants per foot",
-  maintanence:"Low",
-  time:"Early-summer"
-}
-var kalePlant = {
-  name:"KALE",
-  sunlight:"Full sun",
-  type:"Vegetable",
-  space:"1 plants per foot",
-  maintanence:"Medium",
-  time:"Spring"
-}
-var lettucePlant = {
-  name:"LETTUCE",
-  sunlight:"Full sun",
-  type:"Vegetable",
-  space:"2 plants per foot",
-  maintanence:"Low",
-  time:"Spring"
-}
-var onionPlant = {
-  name:"ONIONS",
-  sunlight:"Partial",
-  type:"Vegetable",
-  space:"2 plants per foot",
-  maintanence:"Low",
-  time:"Spring"
-}
-var peaPlant = {
-  name:"PEAS",
-  sunlight:"Full sun",
-  type:"Vegetable",
-  space:"3 plants per foot",
-  maintanence:"Low",
-  time:"Spring"
-}
-var tomatoPlant = {
-  name:"TOMATOES",
-  sunlight:"Full sun",
-  type:"Vegetable",
-  space:"1 plants per foot",
-  maintanence:"Medium",
-  time:"Late summer"
-}
-var marigoldPlant = {
-  name:"MARIGOLDS",
-  sunlight:"Full sun",
-  type:"Plant",
-  space:"3 plants per foot",
-  maintanence:"Low",
-  time:"Late summer"
-}
-var basilPlant = {
-  name:"BASIL",
-  sunlight:"Full sun",
-  type:"Plant",
-  space:"3 plants per foot",
-  maintanence:"Low",
-  time:"Late summer"
-}
-var artichokePlant = {
-  name: "ARTICHOKE",
-  sunlight: "Full sun",
-  type: "Vegetable",
-  space: "1 plant per foot",
-  maintanence: "HIGH",
-  time: "Early Summer"
-}
-var brusselPlant = {
-  name: "BRUSSEL SPROUTS",
-  sunlight: "Partial sun",
-  type: "Vegetable",
-  space: "2 plant per foot",
-  maintanence: "Medium",
-  time: "Late Summer"
-}
-var cabbagePlant = {
-  name: "CABBAGE",
-  sunlight: "Partial sun",
-  type: "Vegetable",
-  space: "1 plant per foot",
-  maintanence: "Medium",
-  time: "Late Summer"
-}
-var cauliflowerPlant = {
-  name: "CAULIFLOWER",
-  sunlight: "Full sun",
-  type: "Vegetable",
-  space: "1 plant per foot",
-  maintanence: "High",
-  time: "Early Summer"
-}
-var cucumberPlant = {
-  name: "CUCUMBER",
-  sunlight: "Full sun",
-  type: "Vegetable",
-  space: "1 plant per foot",
-  maintanence: "Low",
-  time: "Early Summer"
-}
-var garlicPlant = {
-  name: "garlic",
-  sunlight: "Partial sun",
-  type: "Vegetable",
-  space: "2 plant per foot",
-  maintanence: "Low",
-  time: "Spring"
-}
-var leekPlant = {
-  name: "LEEKS",
-  sunlight: "Full sun",
-  type: "Vegetable",
-  space: "1 plant per foot",
-  maintanence: "Medium",
-  time: "Late Summer"
-}
-var parsleyPlant = {
-  name: "PARSLEY",
-  sunlight: "Full sun",
-  type: "Plant",
-  space: "2 plant per foot",
-  maintanence: "Low",
-  time: "Spring"
-}
-var radishPlant = {
-  name: "radish",
-  sunlight: "Partial sun",
-  type: "Vegetable",
-  space: "3 plant per foot",
-  maintanence: "Low",
-  time: "Spring"
-}
-var sagePlant = {
-  name: "ASPARAGUS",
-  sunlight: "Full sun",
-  type: "Plant",
-  space: "1 plant per foot",
-  maintanence: "Low",
-  time: "Spring"
-}
-var spinachPlant = {
-  name: "SPINACH",
-  sunlight: "Partial sun",
-  type: "Vegetable",
-  space: "1 plant per foot",
-  maintanence: "Medium",
-  time: "Late Summer"
-}
-var thymePlant = {
-  name: "THYME",
-  sunlight: "Full sun",
-  type: "Plant",
-  space: "1 plant per foot",
-  maintanence: "Low",
-  time: "Spring"
-}
 
-  this.friend = friend;
-  // this.plantColor = color;
-}
 
-// CREATES VEGGIE OBJECTS
-var beans = new Plant ("beans", "Full Sun", "Spring", "2 plants per foot", "Low", ["tomato", "marigold", "peas", "radish"]);
+<<<<<<< HEAD
 
-var asparagus = new Plant ("asparagus", "Partial Sun", "Spring", "1 plant per foot", "Medium", ["asparagus", "basil", "marigold", "parsley"]);
+var spinach = new Plant ("spinach", "Partial Sun", "Late Summer", "1 plant per foot", "Medium", ["beans", "onion", "peas", "parsley"]);
+
+var sage = new Plant ("sage", "Full Sun", "Spring", "2 plant per foot", "Low", ["kale", "carrots", "cabbage", "brussels"]);
+
+var radish = new Plant ("radish", "Partial Sun", "Spring", "3 plant per foot", "Low", ["beans", "beets", "cucumber", "garlic", "lettuce", "peas", "tomato"]);
+
+var parsley = new Plant ("parsley", "Full Sun", "Spring", "2 plant per foot", "Low", ["carrots", "asparagus", "leek"]);
+
+var leek = new Plant ("leek", "Full Sun", "Late Summer", "1 plant per foot", "Medium", ["carrots", "onino", "sage"]);
+
+var garlic = new Plant ("garlic", "Partial Sun", "Spring", "2 plant per foot", "Low", ["brussels", "cabbage", "califlower", "beets", "lettuce", "radish", "tomato"]);
+
+var cucumber = new Plant ("cucumber", "Full Sun", "Early Summer", "2 plant per foot", "Low", ["beans", "cabbage", "kale", "lettuce", "marigold", "tomato", "radish"]);
+
+var califlower = new Plant ("califlower", "Full Sun", "Early Summer", "1 plant per foot", "High", ["artichoke", "beans", "beets", "cabbage", "garlic", "lettuce", "sage", "spinach"]);
+
+var cabbage = new Plant ("cabbage", "Partial Sun", "Late Summer", "1 plant per foot", "Medium", ["artichoke", "beets", "cucumber", "garlic", "sage", "thyme", "spinach"]);
+
+var brussels = new Plant ("brussels", "Partial Sun", "Late Summer", "2 plant per foot", "Medium", ["artichoke", "beans", "garlic", "sage", "onion", "peas", "spinach", "thyme"]);
+
+var artichoke = new Plant ("artichoke", "Full Sun", "Early Summer", "1 plant per foot", "High", ["brussels", "califlower", "kale"]);
 
 var beets = new Plant ("beets","Full Sun","Early-summer","1 plants per foot","Medium", );
 
@@ -261,127 +94,37 @@ function searchForPlantObject(inputName){
   }
 };
 
-// DETAILS ABOUT VEGGIE OBJECTS
-// var beanPolePlant = {
-//   name:"BEAN-POLES",
-//   sunlight:"Full Sun",
-//   time: "Spring",
-//   space:"2 plants per foot",
-//   maintenance:"Low",
-//   // type:"Vegetable",
-//   friend: ["tomato", "marigold", "peas", "radish"]
-// }
-// var beetPlant = {
-//   name:"BEETS",
-//   sunlight:"Full Sun",
-//   type:"Vegetable",
-//   space:"1 plants per foot",
-//   maintanence:"Medium",
-//   time:"Early-summer"
-// }
-// var carrotPlant = {
-//   name:"CARROTS",
-//   sunlight:"Partial Sun",
-//   type:"Vegetable",
-//   space:"2 plants per foot",
-//   maintanence:"Low",
-//   time:"Early-summer"
-// }
-// var kalePlant = {
-//   name:"KALE",
-//   sunlight:"Full Sun",
-//   type:"Vegetable",
-//   space:"1 plants per foot",
-//   maintanence:"Medium",
-//   time:"Spring"
-// }
-// var lettucePlant = {
-//   name:"LETTUCE",
-//   sunlight:"Full Sun",
-//   type:"Vegetable",
-//   space:"2 plants per foot",
-//   maintanence:"Low",
-//   time:"Spring"
-// }
-// var onionPlant = {
-//   name:"ONIONS",
-//   sunlight:"Partial",
-//   type:"Vegetable",
-//   space:"2 plants per foot",
-//   maintanence:"Low",
-//   time:"Spring"
-// }
-// var peaPlant = {
-//   name:"PEAS",
-//   sunlight:"Full Sun",
-//   type:"Vegetable",
-//   space:"3 plants per foot",
-//   maintanence:"Low",
-//   time:"Spring"
-// }
-// var tomatoPlant = {
-//   name:"TOMATOES",
-//   sunlight:"Full Sun",
-//   type:"Vegetable",
-//   space:"1 plants per foot",
-//   maintanence:"Medium",
-//   time:"Late summer"
-// }
-// var marigoldPlant = {
-//   name:"MARIGOLDS",
-//   sunlight:"Full Sun",
-//   type:"Plant",
-//   space:"3 plants per foot",
-//   maintanence:"Low",
-//   time:"Late summer"
-// }
-// var basilPlant = {
-//   name:"BASIL",
-//   sunlight:"Full Sun",
-//   type:"Plant",
-//   space:"3 plants per foot",
-//   maintanence:"Low",
-//   time:"Late summer"
-// }
-
 var friendsOfChosen = [];
 
 Plant.prototype.myFriend = function(choice) {
-  debugger;
+
+  for ( var i = 0 ; i < this.friend.length ; i++ ) {
+    if (choice === this.friend[i] ){
+      friendsOfChosen.push(this.friend);
+      console.log(friendsOfChosen);
+    } else {
+      alert("oops! no friends found");
+    }
+  }
+};
+
     friendsOfChosen.push(this.friend);
 }
 
-// THIS FUNCTION WORKS TO REFERENCE THE FRIENDS
-// function myFriend(choice) {
-//   debugger;
-//   for ( var i = 0 ; i < beanPolePlant.friend.length ; i++ ) {
-//     if (choice === beanPolePlant.friend[i] ){
-//       friendsOfChosen.push(beanPolePlant.friend);
-//       console.log(friendsOfChosen);
-//     } else {
-//       alert("oops! no friends found");
-//     }
-//   }
-// };
 
-// WORKS TO REMOVE SELECTED ITEM FROM ARRAY
-// function myFriend(choice) {
-//   for ( var i = 0 ; i < plantFriends.length ; i++ ) {
-//     if (choice === plantFriends[i] ){
-//       plantFriends.splice(i, 1);
-//       // alert(plantFriends);
-//       newList.push(plantFriends);
-//     }
-//     // else if ($("#dropdown1").val() === plantFriendsTwo[i] ) {
-//     //   var removed = plantFriendsTwo.slice(i, 0);
-//     //   alert(plantFriendsTwo);
-//     // }
-//   }
-// };
+
+
+function box2Populate (inputfrombox1){
+
+  for ( var i = 0 ; i < inputfrombox1.length ; i++ ) {
+    var poppedFriend = inputfrombox1.pop();
+
+
 
 function box2Populate (arrayofFriends){
   for ( var i = 0 ; i < arrayofFriends.length ; i++ ) {
     var poppedFriend = arrayofFriends.pop();
+
     poppedFriend.forEach(function(friend) {
       $('#dropdown2').append('<option value="' + friend + '">' + friend + '</option>');
     });
@@ -407,14 +150,20 @@ $(document).ready(function(){
 
   });
 
-
   $("#dropdown1").change(function(event){
     var chosenPlant = $("#dropdown1").val();
+    $("#dropdown1").hide();
+    $("#gardenbox-one").text(chosenPlant);
+    $("#gardenbox-one").addClass("seedling-one");
 
-    debugger;
+
+    searchForPlantObject(chosenPlant);
+
 
     var chosenPlantObject = searchForPlantObject(chosenPlant);
+
     chosenPlantObject.myFriend(chosenPlant);
+
     box2Populate(friendsOfChosen);
   });
 });
