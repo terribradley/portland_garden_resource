@@ -1,10 +1,15 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans|Lato|Marck+Script|Raleway+Dots|Kurale);
+@import url(https://fonts.googleapis.com/css?family=Lato|Kurale|Oswald);
 
 .button {
   display: none;
   margin-top: 20px;
 }
-
+.btn {
+  background-color: #2C5225;
+}
+.btn:hover {
+  background-color: #32612A;
+}
 .jumbotron {
   background: linear-gradient(-9deg, #D9CAA9, transparent),
               url(../img/botanical-radish.jpg) no-repeat;
@@ -31,13 +36,12 @@ body {
 .body-content {
   padding-top: 30px;
   padding-right: 60px;
-  padding-left: 70px;
   font-family: 'Lato';
   color: #524C11;
   font-size: 1.5em;
 }
-.body-content h2 {
-  font-size: 1.8em;
+.body-content h3 {
+  font-size: 1.6em;
 }
 #plant-index {
   font-family: 'Kurale', serif;
@@ -48,8 +52,6 @@ body {
   padding-right: 30px;
   padding-top: 10px;
   padding-bottom: 5px;
-
-
 }
 #plant-index h2 {
   font-family: 'Kurale', serif;
@@ -91,17 +93,16 @@ body {
 .modal-admin {
   width: 80%;
 }
-
 .body-content {
   color: #524C11;
 }
 #companion-plant {
   padding-left: 10%;
-  padding-top: 10%
+  padding-top: 5%
 }
 #companion-plant p {
-  font-family: 'Lato';
-  color: #630947;
+  font-family: 'Oswald', sans-serif;
+  color: white;
   font-size: 1.2em;
 }
 select.custom {
@@ -111,6 +112,7 @@ select.custom {
   background-color: #F0CD0A;
   font-family: 'Lato';
   font-size: 1em;
+  color: #036E6C;
 
   /*margin-left: 30px;*/
   }
@@ -134,51 +136,59 @@ select.custom {
   min-height: 220px;
   max-width: 220px;
   background-color: #402603;
+  background-blend-mode: color-dodge;
   background-image: url(../img/plant.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0;
-  border-top: solid 12px #693104;
-  border-left: solid 12px #693104;
+  border-top: solid 12px #2C5225;
+  border-left: solid 12px #2C5225;
 }
 .seedling-two {
   min-height: 220px;
   max-width: 220px;
   background-color: #402603;
+  background-blend-mode: color-dodge;
   background-image: url(../img/plant.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0;
-  border-top: solid 12px #693104;
+  border-top: solid 12px #2C5225;
 }
 .seedling-three {
   min-height: 220px;
   max-width: 220px;
+  background-color: #402603;
+  background-blend-mode: color-dodge;
   background-image: url(../img/plant.jpg);
-  margin: 0;
-  border-top: solid 12px #693104;
-  border-right: solid 12px #693104;
+  background-position: center;
+  border-top: solid 12px #2C5225;
+  border-right: solid 12px #2C5225;
 }
 .seedling-four {
   min-height: 220px;
   max-width: 220px;
+  background-color: #402603;
+  background-blend-mode: color-dodge;
   background-image: url(../img/plant.jpg);
-  margin: -1;
-  border-bottom: solid 12px #693104;
-  border-left: solid 12px #693104;
+  background-position: center;
+  border-bottom: solid 12px #2C5225;
+  border-left: solid 12px #2C5225;
 }
 .seedling-five {
   min-height: 220px;
   max-width: 220px;
+  background-color: #402603;
+  background-blend-mode: color-dodge;
   background-image: url(../img/plant.jpg);
-  margin: -1;
-  border-bottom: solid 12px #693104;
+  background-position: center;
+  border-bottom: solid 12px #2C5225;
 }
 .seedling-six {
   min-height: 220px;
   max-width: 220px;
+  background-color: #402603;
+  background-blend-mode: color-dodge;
   background-image: url(../img/plant.jpg);
-  margin: -;
-  border-bottom: solid 12px #693104;
-  border-right: solid 12px #693104;
+  background-position: center;
+  border-bottom: solid 12px #2C5225;
+  border-right: solid 12px #2C5225;
 }
