@@ -11,6 +11,18 @@ function Plant(name, sunlight, time, space, maintenance, friend) {
 // CREATES VEGGIE OBJECTS
 var beans = new Plant ("beans", "Full Sun", "Spring", "2 plants per foot", "Low", ["tomato", "marigold", "peas", "radish"]);
 
+var plantObjectArray= [artichokePlant, asparagusPlant, beanPolePlant, beetPlant, brusselPlant, cabbagePlant, carrotPlant, cauliflowerPlant, , garlicPlant, kalePlant, leekPlant, lettucePlant, onionPlant, peaPlant, radishPlant, spinachPlant, tomatoPlant, parsleyPlant, sagePlant, thymePlant, marigoldPlant];
+
+var spinach = new Plant ("spinach", "Partial Sun", "Late Summer", "1 plant per foot", "Medium", ["beans", "onion", "peas", "parsley"]);
+
+var sage = new Plant ("sage", "Full Sun", "Spring", "2 plant per foot", "Low", ["kale", "carrots", "cabbage", "brussels"]);
+
+var radish = new Plant ("radish", "Partial Sun", "Spring", "3 plant per foot", "Low", ["beans", "beets", "cucumber", "garlic", "lettuce", "peas", "tomato"]);
+
+var parsley = new Plant ("parsley", "Full Sun", "Spring", "2 plant per foot", "Low", ["carrots", "asparagus", "leek"]);
+
+var leek = new Plant ("leek", "Full Sun", "Late Summer", "1 plant per foot", "Medium", ["carrots", "onino", "sage"]);
+
 var asparagus = new Plant ("asparagus", "Partial Sun", "Spring", "1 plant per foot", "Medium", ["asparagus", "basil", "marigold", "parsley"]);
 
 var beets = new Plant ("beets","Full Sun","Early-summer","1 plants per foot","Medium", );
@@ -31,8 +43,6 @@ var marigolds = new Plant ("marigolds","Full Sun","Late summer","3 plants per fo
 
 var basil = new Plant ("basil","Full Sun","Late summer","3 plants per foot","Low");
 
-var allPlants = [ beans, asparagus, carrots, , , , , , , , , ];
-
 var chosenPlantObject;
 var indexPlantObject;
 var friendsOfChosen = [];
@@ -47,7 +57,7 @@ function searchForPlantObject(inputName) {
 };
 
 Plant.prototype.myFriend = function(choice) {
-    friendsOfChosen.push(this.friend);
+  friendsOfChosen.push(this.friend);
 }
 
 function box2Populate (arrayofFriends){
@@ -78,6 +88,9 @@ $(document).ready(function(){
 // COMPANION PLANTER FUNCTIONALITY
   $("#dropdown1").change(function(event){
     var chosenPlant = $("#dropdown1").val();
+    $("#dropdown1").hide();
+    $("#gardenbox-one").text(chosenPlant);
+    $("#gardenbox-one").addClass("seedling-one");
 
     var chosenPlantObject = searchForPlantObject(chosenPlant);
     chosenPlantObject.myFriend(chosenPlant);
