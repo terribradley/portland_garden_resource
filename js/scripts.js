@@ -8,10 +8,10 @@ function Plant(name, sunlight, time, space, maintenance, friend) {
   this.friend = friend;
 }
 
-// CREATES VEGGIE OBJECTS
-var beans = new Plant ("beans", "Full Sun", "Spring", "2 plants per foot", "Low", ["tomato", "marigold", "peas", "radish"]);
+// VEGGIE OBJECTS
+var thyme = new Plant ("thyme", "Full Sun", "Spring", "1 plant per foot", "Low" ["brussels", "cabbage", "cauliflower","kale"]);
 
-var plantObjectArray= [artichokePlant, asparagusPlant, beanPolePlant, beetPlant, brusselPlant, cabbagePlant, carrotPlant, cauliflowerPlant, , garlicPlant, kalePlant, leekPlant, lettucePlant, onionPlant, peaPlant, radishPlant, spinachPlant, tomatoPlant, parsleyPlant, sagePlant, thymePlant, marigoldPlant];
+var beans = new Plant ("beans", "Full Sun", "Spring", "2 plants per foot", "Low", ["tomato", "marigold", "peas", "radish"]);
 
 var spinach = new Plant ("spinach", "Partial Sun", "Late Summer", "1 plant per foot", "Medium", ["beans", "onion", "peas", "parsley"]);
 
@@ -19,29 +19,43 @@ var sage = new Plant ("sage", "Full Sun", "Spring", "2 plant per foot", "Low", [
 
 var radish = new Plant ("radish", "Partial Sun", "Spring", "3 plant per foot", "Low", ["beans", "beets", "cucumber", "garlic", "lettuce", "peas", "tomato"]);
 
-var parsley = new Plant ("parsley", "Full Sun", "Spring", "2 plant per foot", "Low", ["carrots", "asparagus", "leek"]);
+var parsley = new Plant ("parsley", "Full Sun", "Spring", "2 plant per foot", "Low", ["carrots", "asparagus", "leeks"]);
 
-var leek = new Plant ("leek", "Full Sun", "Late Summer", "1 plant per foot", "Medium", ["carrots", "onino", "sage"]);
+var leeks = new Plant ("leeks", "Full Sun", "Late Summer", "1 plant per foot", "Medium", ["carrots", "onion", "sage"]);
+
+var garlic = new Plant ("garlic", "Partial Sun", "Spring", "2 plant per foot", "Low", ["brussels", "cabbage", "cauliflower", "beets", "lettuce", "radish", "tomato"]);
+
+var cucumber = new Plant ("cucumber", "Full Sun", "Early Summer", "2 plant per foot", "Low", ["beans", "cabbage", "kale", "lettuce", "marigold", "tomato", "radish"]);
+
+var cauliflower = new Plant ("cauliflower", "Full Sun", "Early Summer", "1 plant per foot", "High", ["artichoke", "beans", "beets", "cabbage", "garlic", "lettuce", "sage", "spinach"]);
+
+var cabbage = new Plant ("cabbage", "Partial Sun", "Late Summer", "1 plant per foot", "Medium", ["artichoke", "beets", "cucumber", "garlic", "sage", "thyme", "spinach"]);
+
+var brussels = new Plant ("brussels", "Partial Sun", "Late Summer", "2 plant per foot", "Medium", ["artichoke", "beans", "garlic", "sage", "onion", "peas", "spinach", "thyme"]);
+
+var artichoke = new Plant ("artichoke", "Full Sun", "Early Summer", "1 plant per foot", "High", ["brussels", "cauliflower", "kale"]);
 
 var asparagus = new Plant ("asparagus", "Partial Sun", "Spring", "1 plant per foot", "Medium", ["asparagus", "basil", "marigold", "parsley"]);
 
-var beets = new Plant ("beets","Full Sun","Early-summer","1 plants per foot","Medium", );
+var beets = new Plant ("beets","Full Sun","Early-summer","1 plants per foot","Medium", ["onions", "lettuce", "kale", "tomato"]);
 
-var carrots = new Plant ("carrots","Partial Sun","Early-summer","2 plants per foot","Low", );
+var carrots = new Plant ("carrots","Partial Sun","Early-summer","2 plants per foot","Low", ["beans", "lettuce", "parsley", "peas", "radish", "sage"]);
 
-var kale = new Plant ("kale","Full Sun","Spring","1 plants per foot","Medium");
+var kale = new Plant ("kale","Full Sun","Spring","1 plants per foot","Medium", ["artichoke", "beets", "beans", "garlic", "lettuce", "thyme", "spinach"]);
 
-var lettuce = new Plant ("lettuce","Full Sun","Spring","2 plants per foot","Low");
+var lettuce = new Plant ("lettuce","Full Sun","Spring","2 plants per foot","Low", ["cauliflower", "carrots", "beets", "cucumber", "radish"]);
 
-var onions = new Plant ("onions","Partial Sun","Spring","2 plants per foot","Low");
+var onions = new Plant ("onions","Partial Sun","Spring","2 plants per foot","Low" , ["kale", "cabbage", "cauliflower", "leeks", "spinach", "tomato"]);
 
-var peas = new Plant ("peas","Full Sun","Spring","3 plants per foot","Low");
+var peas = new Plant ("peas","Full Sun","Spring","3 plants per foot","Low", ["sage", "thyme", "beans", "kale", "radish", "spinach"]);
 
-var tomatoes = new Plant ("tomatoes","Full Sun","Late summer","1 plants per foot","Medium");
+var tomato = new Plant ("tomato","Full Sun","Late summer","1 plants per foot","Medium", ["asparagus", "basil", "carrots", "marigold", "garlic", "peas", "sage"]);
 
-var marigolds = new Plant ("marigolds","Full Sun","Late summer","3 plants per foot","Low");
+var marigold = new Plant ("marigold","Full Sun","Late summer","3 plants per foot","Low", ["tomato", "beans", "cucumber"]);
 
-var basil = new Plant ("basil","Full Sun","Late summer","3 plants per foot","Low");
+var basil = new Plant ("basil","Full Sun","Late summer","3 plants per foot","Low", ["tomato", "peas", "beans"]);
+
+var allPlants = [artichoke, asparagus, beans, beets, brussels, cabbage, carrots, cauliflower, garlic, kale, leeks, lettuce, onions, peas, radish, spinach, tomato, parsley, sage, basil, marigold, thyme, cucumber];
 
 var chosenPlantObject;
 var indexPlantObject;
@@ -73,7 +87,7 @@ $(document).ready(function(){
 // USER CLICKS ON VEGGIE, IDENTIFIES HTML VALUE
   $("ul.clicked li").click(function(event){
     event.preventDefault();
-    var indexPlant = this.textContent;
+    var indexPlant = this.textContent.toLowerCase();
 
     var indexPlantObject = searchForPlantObject(indexPlant);
 // SENDS PLANT INFO TO MODAL
