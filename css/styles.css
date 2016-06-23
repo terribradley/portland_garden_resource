@@ -28,7 +28,6 @@ body {
   font-family: 'Lato';
   color: #524C11
 }
-
 #plant-index {
   font-family: 'Kurale', serif;
   float: left;
@@ -86,17 +85,50 @@ body {
 }
 #companion-plant {
   margin: 8% 8% 8% 8%;
+  /*float: right;*/
+}
+#gardenbox-one {
+  float: left;
+}
+#gardenbox-two {
+  float: left;
+}
+#gardenbox-three {
+  float: left;
+}
+#gardenbox-four {
+  float: left;
+}
+#gardenbox-five {
+  float: left;
+}
+#gardenbox-six {
+  float: left;
 }
 select.custom {
   padding-right: 25px;
   width: 160px;
   background-position: center;
-  background-color: #EDC9AF;
+  background-color: #F0CD0A;
   font-family: 'Lato';
   color: #630947
   margin: 60px;
   }
-
+  #dropdown2 {
+    display: none;
+  }
+  #dropdown3 {
+    display: none;
+  }
+  #dropdown4 {
+    display: none;
+  }
+  #dropdown5 {
+    display: none;
+  }
+  #dropdown6 {
+    display: none;
+  }
 .seedling-one {
   min-height: 220px;
   max-width: 220px;
@@ -105,48 +137,47 @@ select.custom {
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
-  border-top: solid 12px blue;
-  border-left: solid 12px blue;
+  border-top: solid 12px #693104;
+  border-left: solid 12px #693104;
 }
-#gardenbox-two {
+.seedling-two {
   min-height: 220px;
   max-width: 220px;
   background-color: #402603;
-  background-image: url(../img/seedling1.1.png);
+  background-image: url(../img/plant.jpg);
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
-  border-top: solid 12px blue;
+  border-top: solid 12px #693104;
 }
-#gardenbox-three {
+.seedling-three {
   min-height: 220px;
   max-width: 220px;
-  background-image: url(../img/seedling3.jpg);
-
+  background-image: url(../img/plant.jpg);
   margin: 0;
-  border-top: solid 12px blue;
-  border-right: solid 12px blue;
+  border-top: solid 12px #693104;
+  border-right: solid 12px #693104;
 }
-#gardenbox-four {
+.seedling-four {
   min-height: 220px;
   max-width: 220px;
-  background-image: url(../img/seedling4.jpg);
+  background-image: url(../img/plant.jpg);
   margin: -1;
-  border-bottom: solid 12px blue;
-  border-left: solid 12px blue;
+  border-bottom: solid 12px #693104;
+  border-left: solid 12px #693104;
 }
-#gardenbox-five {
+.seedling-five {
   min-height: 220px;
   max-width: 220px;
-  background-image: url(../img/seedling1.jpg);
+  background-image: url(../img/plant.jpg);
   margin: -1;
-  border-bottom: solid 12px blue;
+  border-bottom: solid 12px #693104;
 }
-#gardenbox-six {
+.seedling-six {
   min-height: 220px;
   max-width: 220px;
-  background-image: url(../img/seedling1.jpg);
+  background-image: url(../img/plant.jpg);
   margin: -;
-  border-bottom: solid 12px blue;
-  border-right: solid 12px blue;
+  border-bottom: solid 12px #693104;
+  border-right: solid 12px #693104;
 }
