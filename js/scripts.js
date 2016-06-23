@@ -8,23 +8,6 @@ function Plant(name, sunlight, time, space, maintenance, friend) {
   this.friend = friend;
 }
 
-var plantObjectArray= [artichokePlant, asparagusPlant, beanPolePlant, beetPlant, basil, brusselPlant, cabbagePlant, carrotPlant, cauliflowerPlant, , garlicPlant, kalePlant, leekPlant, lettucePlant, onionPlant, peaPlant, radishPlant, spinachPlant, tomatoPlant, parsleyPlant, sagePlant, thymePlant, marigoldPlant];
-
-var plantClick = (function(id, plantObject) {
-$(id).click(function() {
-  $(".modal-plant-title").text(plantObject.name);
-  $(".sun").text(plantObject.sunlight);
-  $(".time").text(plantObject.time);
-  $(".space").text(plantObject.space);
-  $(".maintenance").text(plantObject.maintenance);
-  $("#plant-modal").modal("show");
-
-for (i = 0; i < plantidArray.length; i ++){
-  plantClick(plantidArray[i], plantObjectArray[i]);
-}
-});
-});
-
 
 
 // VEGGIE OBJECTS
@@ -40,7 +23,7 @@ var radish = new Plant ("radish", "Partial Sun", "Spring", "3 plant per foot", "
 
 var parsley = new Plant ("parsley", "Full Sun", "Spring", "2 plant per foot", "Low", ["carrots", "asparagus", "leek"]);
 
-var leek = new Plant ("leek", "Full Sun", "Late Summer", "1 plant per foot", "Medium", ["carrots", "onion", "sage"]);
+var leeks = new Plant ("leek", "Full Sun", "Late Summer", "1 plant per foot", "Medium", ["carrots", "onion", "sage"]);
 
 var garlic = new Plant ("garlic", "Partial Sun", "Spring", "2 plant per foot", "Low", ["brussels", "cabbage", "cauliflower", "beets", "lettuce", "radish", "tomato"]);
 
@@ -115,7 +98,6 @@ $(document).ready(function(){
 // USER CLICKS ON VEGGIE, IDENTIFIES HTML VALUE
   $("ul.clicked li").click(function(event){
     event.preventDefault();
-
     var indexPlant = this.textContent.toLowerCase();
     var indexPlantObject = searchForPlantObject(indexPlant);
 // SENDS PLANT INFO TO MODAL
@@ -137,7 +119,6 @@ $(document).ready(function(){
     $("#dropdown2").show();
     $("#gardenbox-one").text(chosenPlant);
     $("#gardenbox-one").addClass("seedling-one");
-
   });
   $("#dropdown2").change(function(event){
     var chosenPlant = $("#dropdown2").val();
