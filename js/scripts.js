@@ -8,26 +8,10 @@ function Plant(name, sunlight, time, space, maintenance, friend) {
   this.friend = friend;
 }
 
-<<<<<<< HEAD
+
 var plantObjectArray= [artichokePlant, asparagusPlant, beanPolePlant, beetPlant, basil, brusselPlant, cabbagePlant, carrotPlant, cauliflowerPlant, , garlicPlant, kalePlant, leekPlant, lettucePlant, onionPlant, peaPlant, radishPlant, spinachPlant, tomatoPlant, parsleyPlant, sagePlant, thymePlant, marigoldPlant];
 
-var plantClick = (function(id, plantObject) {
-$(id).click(function() {
-  $(".modal-plant-title").text(plantObject.name);
-  $(".sun").text(plantObject.sunlight);
-  $(".time").text(plantObject.time);
-  $(".space").text(plantObject.space);
-  $(".maintenance").text(plantObject.maintenance);
-  $("#plant-modal").modal("show");
 
-for (i = 0; i < plantidArray.length; i ++){
-  plantClick(plantidArray[i], plantObjectArray[i]);
-}
-});
-});
-
-
-=======
 // VEGGIE OBJECTS
 var thyme = new Plant ("thyme", "Full Sun", "Spring", "1 plant per foot", "Low" ["brussels", "cabbage", "cauliflower","kale"]);
 
