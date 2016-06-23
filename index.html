@@ -18,12 +18,12 @@
     <!-- float left plant index -->
 <div id="plant-index">
 <h2>Vegetables</h2>
-<ul>
-  <li id="artichoke">artichokes</li>
+<ul class="clicked">
+  <li id="artichoke">Artichoke</li>
   <li id="asparagus">Asparagus</li>
-  <li id="bean-pole">Beans-Pole</li>
+  <li id="bean-pole">Beans</li>
   <li id="beet">Beets</li>
-  <li id="brussel-sprout">Brussel Sprouts</li>
+  <li id="brussel-sprout">Brussels</li>
   <li id="cabbage">Cabbage</li>
   <li id="carrot">Carrots</li>
   <li id="cauliflower">Cauliflower</li>
@@ -39,11 +39,12 @@
   <li id="tomato">Tomato</li>
 </ul>
 <h2>Herbs/Flowers</h2>
-<ul>
+<ul class="clicked">
+  <li id="basil">Basil</li>
+  <li id="marigold">Marigold</li>
   <li id="parsley">Parsley</li>
   <li id="sage">Sage</li>
   <li id="thyme">Thyme</li>
-  <li id="marigold">Marigolds</li>
 </ul>
 </div>
 <!-- MODAL YOU WIN BELOW -->
@@ -51,6 +52,7 @@
      <div class="modal-admin" role="document">
        <div class="modal-content">
          <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
            <h4 class="modal-title"><span class="modal-plant-title"></span></h4>
          </div>
          <div class="modal-body">
@@ -75,16 +77,15 @@
 <h3>Choose a plant from the drop down. In the next drop down menu, it will show you a list companion plants that would be good to plant surrounding your original choice. It'll also help you plan the spacing in your garden bed.</h3>
 <div id="companion-plant">
   <div class="row">
-    <div id="gardenbox-one" class="col-sm-4 ">
-      <select id="dropdown1" name="">
+    <div id="seedling-one" class="col-sm-4 ">
+      <select class="form-control custom" id="dropdown1" name="">
         <option>Select a plant</option>
         <option value="tomato">tomato</option>
         <option value="beans">beans</option>
         <option value="marigold">marigold</option>
       </select>
-</div>
-<span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
-</div>
+    </div>
+  </div>
 </div>
 
 
