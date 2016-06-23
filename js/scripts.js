@@ -8,6 +8,7 @@ function Plant(name, sunlight, time, space, maintenance, friend) {
   this.friend = friend;
 }
 
+
 // VEGGIE OBJECTS
 var thyme = new Plant ("thyme", "Full Sun", "Spring", "1 plant per foot", "Low", ["brussels", "cabbage", "cauliflower","kale"]);
 
@@ -19,9 +20,9 @@ var sage = new Plant ("sage", "Full Sun", "Spring", "2 plant per foot", "Low", [
 
 var radish = new Plant ("radish", "Partial Sun", "Spring", "3 plant per foot", "Low", ["beans", "beets", "cucumber", "garlic", "lettuce", "peas", "tomato"]);
 
-var parsley = new Plant ("parsley", "Full Sun", "Spring", "2 plant per foot", "Low", ["carrots", "asparagus", "leeks"]);
+var parsley = new Plant ("parsley", "Full Sun", "Spring", "2 plant per foot", "Low", ["carrots", "asparagus", "leek"]);
 
-var leeks = new Plant ("leeks", "Full Sun", "Late Summer", "1 plant per foot", "Medium", ["carrots", "onion", "sage"]);
+var leeks = new Plant ("leek", "Full Sun", "Late Summer", "1 plant per foot", "Medium", ["carrots", "onion", "sage"]);
 
 var garlic = new Plant ("garlic", "Partial Sun", "Spring", "2 plant per foot", "Low", ["brussels", "cabbage", "cauliflower", "beets", "lettuce", "radish", "tomato"]);
 
@@ -49,13 +50,13 @@ var onions = new Plant ("onions","Partial Sun","Spring","2 plants per foot","Low
 
 var peas = new Plant ("peas","Full Sun","Spring","3 plants per foot","Low", ["sage", "thyme", "beans", "kale", "radish", "spinach"]);
 
-var tomato = new Plant ("tomato","Full Sun","Late summer","1 plants per foot","Medium", ["asparagus", "basil", "carrots", "marigold", "garlic", "peas", "sage"]);
+var tomato = new Plant ("tomatoes","Full Sun","Late summer","1 plants per foot","Medium", ["asparagus", "basil", "carrots", "marigold", "garlic", "peas", "sage"]);
 
 var marigold = new Plant ("marigold","Full Sun","Late summer","3 plants per foot","Low", ["tomato", "beans", "cucumber"]);
 
 var basil = new Plant ("basil","Full Sun","Late summer","3 plants per foot","Low", ["tomato", "peas", "beans"]);
 
-var allPlants = [artichoke, asparagus, beans, beets, brussels, cabbage, carrots, cauliflower, garlic, kale, leeks, lettuce, onions, peas, radish, spinach, tomato, parsley, sage, basil, marigold, thyme, cucumber];
+var allPlants = [artichoke, asparagus, beans, beets, brussels, cabbage, carrots, cauliflower, garlic, kale, leek, lettuce, onions, peas, radish, spinach, tomato, parsley, sage, basil, marigold, thyme, cucumber];
 
 var chosenPlantObject;
 var indexPlantObject;
@@ -69,6 +70,7 @@ function searchForPlantObject(inputName) {
     }
   }
 };
+
 
 Plant.prototype.myFriend = function(choice) {
   friendsOfChosen.push(this.friend);
@@ -121,7 +123,6 @@ $(document).ready(function(){
   $("ul.clicked li").click(function(event){
     event.preventDefault();
     var indexPlant = this.textContent.toLowerCase();
-
     var indexPlantObject = searchForPlantObject(indexPlant);
 // SENDS PLANT INFO TO MODAL
     $(".modal-plant-title").text(indexPlantObject.plantName);
