@@ -4,6 +4,7 @@
   display: none;
   margin-top: 20px;
 }
+
 .btn {
   background-color: #2C5225;
   color: #DBC693;
@@ -12,6 +13,7 @@
   background-color: #32612A;
   color: white;
 }
+
 .jumbotron {
   background: linear-gradient(-9deg, #D9CAA9, transparent),
               url(../img/botanical-radish.jpg) no-repeat;
