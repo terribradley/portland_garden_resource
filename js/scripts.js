@@ -1,4 +1,4 @@
-// backend
+// BACKEND LOGIC
 function Plant(name, sunlight, time, space, maintenance, friend) {
   this.plantName = name;
   this.plantSun = sunlight;
@@ -8,22 +8,10 @@ function Plant(name, sunlight, time, space, maintenance, friend) {
   this.friend = friend;
 }
 
-// Plant.prototype.plantinfo = function() {
-//   var elem = document.getElementById("bean-pole");
-//   $("#plant-index").click(function(){
-//     $(".modal-plant-title").text(this.name);
-//     $(".sun").text(this.sunlight);
-//     $(".space").text(this.space);
-//     $(".maintenance").text(this.maintenance);
-//     $(".time").text(this.time);
-//     $("#plant-modal").modal("show");
-
-// var plantidArray=["artichoke", "asparagus","bean-pole","beet", "brussel-sprout", "cabbage", "carrot", "cauliflower", "cucumber", "garlic", "kale", "leek", "lettuce", "onion", "pea", "radish", "spinach", "tomato", "parsley", "sage", "thyme", "marigold" ];
+// CREATES VEGGIE OBJECTS
+var beans = new Plant ("beans", "Full Sun", "Spring", "2 plants per foot", "Low", ["tomato", "marigold", "peas", "radish"]);
 
 var plantObjectArray= [artichokePlant, asparagusPlant, beanPolePlant, beetPlant, brusselPlant, cabbagePlant, carrotPlant, cauliflowerPlant, , garlicPlant, kalePlant, leekPlant, lettucePlant, onionPlant, peaPlant, radishPlant, spinachPlant, tomatoPlant, parsleyPlant, sagePlant, thymePlant, marigoldPlant];
-
-
-
 
 var spinach = new Plant ("spinach", "Partial Sun", "Late Summer", "1 plant per foot", "Medium", ["beans", "onion", "peas", "parsley"]);
 
@@ -35,17 +23,7 @@ var parsley = new Plant ("parsley", "Full Sun", "Spring", "2 plant per foot", "L
 
 var leek = new Plant ("leek", "Full Sun", "Late Summer", "1 plant per foot", "Medium", ["carrots", "onino", "sage"]);
 
-var garlic = new Plant ("garlic", "Partial Sun", "Spring", "2 plant per foot", "Low", ["brussels", "cabbage", "califlower", "beets", "lettuce", "radish", "tomato"]);
-
-var cucumber = new Plant ("cucumber", "Full Sun", "Early Summer", "2 plant per foot", "Low", ["beans", "cabbage", "kale", "lettuce", "marigold", "tomato", "radish"]);
-
-var califlower = new Plant ("califlower", "Full Sun", "Early Summer", "1 plant per foot", "High", ["artichoke", "beans", "beets", "cabbage", "garlic", "lettuce", "sage", "spinach"]);
-
-var cabbage = new Plant ("cabbage", "Partial Sun", "Late Summer", "1 plant per foot", "Medium", ["artichoke", "beets", "cucumber", "garlic", "sage", "thyme", "spinach"]);
-
-var brussels = new Plant ("brussels", "Partial Sun", "Late Summer", "2 plant per foot", "Medium", ["artichoke", "beans", "garlic", "sage", "onion", "peas", "spinach", "thyme"]);
-
-var artichoke = new Plant ("artichoke", "Full Sun", "Early Summer", "1 plant per foot", "High", ["brussels", "califlower", "kale"]);
+var asparagus = new Plant ("asparagus", "Partial Sun", "Spring", "1 plant per foot", "Medium", ["asparagus", "basil", "marigold", "parsley"]);
 
 var beets = new Plant ("beets","Full Sun","Early-summer","1 plants per foot","Medium", );
 
@@ -57,8 +35,7 @@ var lettuce = new Plant ("lettuce","Full Sun","Spring","2 plants per foot","Low"
 
 var onions = new Plant ("onions","Partial Sun","Spring","2 plants per foot","Low");
 
-var peas = new Plant ("peas","Full Sun","Spring","3 plants per foot","Low"
-);
+var peas = new Plant ("peas","Full Sun","Spring","3 plants per foot","Low");
 
 var tomatoes = new Plant ("tomatoes","Full Sun","Late summer","1 plants per foot","Medium");
 
@@ -66,14 +43,13 @@ var marigolds = new Plant ("marigolds","Full Sun","Late summer","3 plants per fo
 
 var basil = new Plant ("basil","Full Sun","Late summer","3 plants per foot","Low");
 
-var allPlants = [ beans, asparagus, carrots, , , , , , , , , ];
-
 var chosenPlantObject;
 var indexPlantObject;
 var friendsOfChosen = [];
+
 // THIS FUCKING WORKS!!!!! INPUT USER STRING FROM CLICK, RETURNS OBJECT OF THE VEGGIE CHOSEN
-function searchForPlantObject(inputName){
-  for (var i = 0 ; i < allPlants.length ; i++){
+function searchForPlantObject(inputName) {
+  for (var i = 0 ; i < allPlants.length ; i++) {
     if (inputName === (allPlants[i].plantName)) {
       return allPlants[i];
     }
@@ -81,18 +57,8 @@ function searchForPlantObject(inputName){
 };
 
 Plant.prototype.myFriend = function(choice) {
-      friendsOfChosen.push(this.friend);
-  }
-
-
-
-
-
-function box2Populate (inputfrombox1){
-  for ( var i = 0 ; i < inputfrombox1.length ; i++ ) {
-    var poppedFriend = inputfrombox1.pop();
-
-
+  friendsOfChosen.push(this.friend);
+}
 
 function box2Populate (arrayofFriends){
   for ( var i = 0 ; i < arrayofFriends.length ; i++ ) {
@@ -110,23 +76,21 @@ $(document).ready(function(){
     var indexPlant = this.textContent;
 
     var indexPlantObject = searchForPlantObject(indexPlant);
-
+// SENDS PLANT INFO TO MODAL
     $(".modal-plant-title").text(indexPlantObject.plantName);
     $(".sun").text(indexPlantObject.plantSun);
     $(".space").text(indexPlantObject.plantSpace);
     $(".maintenance").text(indexPlantObject.plantMaintenance);
     $(".time").text(indexPlantObject.plantTime);
     $("#plant-modal").modal("show");
-
   });
 
+// COMPANION PLANTER FUNCTIONALITY
   $("#dropdown1").change(function(event){
     var chosenPlant = $("#dropdown1").val();
     $("#dropdown1").hide();
     $("#gardenbox-one").text(chosenPlant);
     $("#gardenbox-one").addClass("seedling-one");
-
-
 
     var chosenPlantObject = searchForPlantObject(chosenPlant);
     chosenPlantObject.myFriend(chosenPlant);
