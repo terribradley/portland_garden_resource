@@ -38,8 +38,8 @@ var indexPlantObject;
 var friendsOfChosen = [];
 
 // THIS FUCKING WORKS!!!!! INPUT USER STRING FROM CLICK, RETURNS OBJECT OF THE VEGGIE CHOSEN
-function searchForPlantObject(inputName){
-  for (var i = 0 ; i < allPlants.length ; i++){
+function searchForPlantObject(inputName) {
+  for (var i = 0 ; i < allPlants.length ; i++) {
     if (inputName === (allPlants[i].plantName)) {
       return allPlants[i];
     }
@@ -75,6 +75,7 @@ $(document).ready(function(){
     $("#plant-modal").modal("show");
   });
 
+// COMPANION PLANTER FUNCTIONALITY
   $("#dropdown1").change(function(event){
     var chosenPlant = $("#dropdown1").val();
 
