@@ -190,7 +190,11 @@ $(document).ready(function(){
     var chosenPlantObject = searchForPlantObject(chosenPlant);
     chosenPlantObject.myFriend(chosenPlant);
     $("#dropdown6").hide();
-    $("#gardenbox-six").html("<p>" + chosenPlant + "<br>" + chosenPlantObject.plantSpace + "</p>");
+    $("#resetButton").show();
+    $("#gardenbox-six").text(chosenPlant);
     $("#gardenbox-six").addClass("seedling-six");
+  });
+  $("#resetButton").click(function(event){
+    location.reload();
   });
 });

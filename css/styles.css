@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather+Sans|Lato|Marck+Script|Raleway+Dots|Kurale);
 
+#resetButton {
+  display: none;
+}
+
 .jumbotron {
   background: linear-gradient(-9deg, #D9CAA9, transparent),
               url(../img/botanical-radish.jpg) no-repeat;
