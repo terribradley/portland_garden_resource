@@ -82,6 +82,14 @@ function box2Populate (arrayofFriends){
     });
   }
 };
+function box3Populate (arrayofFriends){
+  for ( var i = 0 ; i < arrayofFriends.length ; i++ ) {
+    var poppedFriend = arrayofFriends.pop();
+    poppedFriend.forEach(function(friend) {
+      $('#dropdown3').append('<option value="' + friend + '">' + friend + '</option>');
+    });
+  }
+};
 
 $(document).ready(function(){
 // USER CLICKS ON VEGGIE, IDENTIFIES HTML VALUE
@@ -102,12 +110,22 @@ $(document).ready(function(){
 // COMPANION PLANTER FUNCTIONALITY
   $("#dropdown1").change(function(event){
     var chosenPlant = $("#dropdown1").val();
-    $("#dropdown1").hide();
-    $("#gardenbox-one").text(chosenPlant);
-    $("#gardenbox-one").addClass("seedling-one");
-
     var chosenPlantObject = searchForPlantObject(chosenPlant);
     chosenPlantObject.myFriend(chosenPlant);
     box2Populate(friendsOfChosen);
+    $("#dropdown1").hide();
+    $("#dropdown2").show();
+    $("#gardenbox-one").text(chosenPlant);
+    $("#gardenbox-one").addClass("seedling-one");
+  });
+  $("#dropdown2").change(function(event){
+    var chosenPlant = $("#dropdown2").val();
+    var chosenPlantObject = searchForPlantObject(chosenPlant);
+    chosenPlantObject.myFriend(chosenPlant);
+    box3Populate(friendsOfChosen);
+    $("#dropdown2").hide();
+    $("#dropdown3").show();
+    $("#gardenbox-two").text(chosenPlant);
+    $("#gardenbox-two").addClass("seedling-two");
   });
 });
