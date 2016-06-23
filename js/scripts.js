@@ -37,23 +37,23 @@ var artichoke = new Plant ("artichoke", "Full Sun", "Early Summer", "1 plant per
 
 var asparagus = new Plant ("asparagus", "Partial Sun", "Spring", "1 plant per foot", "Medium", ["asparagus", "basil", "marigold", "parsley"]);
 
-var beets = new Plant ("beets","Full Sun","Early-summer","1 plant per foot","Medium", ["onions", "lettuce", "kale", "tomato"]);
+var beets = new Plant ("beets", "Full Sun", "Early Summer", "1 plant per foot", "Medium", ["onions", "lettuce", "kale", "tomato"]);
 
-var carrots = new Plant ("carrots","Partial Sun","Early-summer","2 plants per foot","Low", ["beans", "lettuce", "parsley", "peas", "radish", "sage"]);
+var carrots = new Plant ("carrots", "Partial Sun", "Early Summer", "2 plants per foot", "Low", ["beans", "lettuce", "parsley", "peas", "radish", "sage"]);
 
-var kale = new Plant ("kale","Full Sun","Spring","1 plant per foot","Medium", ["artichoke", "beets", "beans", "garlic", "lettuce", "thyme", "spinach"]);
+var kale = new Plant ("kale", "Full Sun", "Spring", "1 plant per foot", "Medium", ["artichoke", "beets", "beans", "garlic", "lettuce", "thyme", "spinach"]);
 
-var lettuce = new Plant ("lettuce","Full Sun","Spring","2 plants per foot","Low", ["cauliflower", "carrots", "beets", "cucumber", "radish"]);
+var lettuce = new Plant ("lettuce", "Full Sun", "Spring", "2 plants per foot", "Low", ["cauliflower", "carrots", "beets", "cucumber", "radish"]);
 
-var onions = new Plant ("onions","Partial Sun","Spring","2 plants per foot","Low" , ["kale", "cabbage", "cauliflower", "leeks", "spinach", "tomato"]);
+var onions = new Plant ("onions", "Partial Sun", "Spring", "2 plants per foot", "Low", ["kale", "cabbage", "cauliflower", "leeks", "spinach", "tomato"]);
 
-var peas = new Plant ("peas","Full Sun","Spring","3 plants per foot","Low", ["sage", "thyme", "beans", "kale", "radish", "spinach"]);
+var peas = new Plant ("peas", "Full Sun", "Spring", "3 plants per foot", "Low", ["sage", "thyme", "beans", "kale", "radish", "spinach"]);
 
-var tomato = new Plant ("tomato","Full Sun","Late summer","1 plant per foot","Medium", ["asparagus", "basil", "carrots", "marigold", "garlic", "peas", "sage"]);
+var tomato = new Plant ("tomato", "Full Sun", "Late Summer", "1 plant per foot", "Medium", ["asparagus", "basil", "carrots", "marigold", "garlic", "peas", "sage"]);
 
-var marigold = new Plant ("marigold","Full Sun","Late summer","3 plants per foot","Low", ["tomato", "beans", "cucumber"]);
+var marigold = new Plant ("marigold", "Full Sun", "Late Summer", "3 plants per foot", "Low", ["tomato", "beans", "cucumber"]);
 
-var basil = new Plant ("basil","Full Sun","Late summer","3 plants per foot","Low", ["tomato", "peas", "beans"]);
+var basil = new Plant ("basil","Full Sun","Late Summer","3 plants per foot","Low", ["tomato", "peas", "beans"]);
 
 var allPlants = [artichoke, asparagus, beans, beets, brussels, cabbage, carrots, cauliflower, garlic, kale, leeks, lettuce, onions, peas, radish, spinach, tomato, parsley, sage, basil, marigold, thyme, cucumber];
 
@@ -131,6 +131,7 @@ $(document).ready(function(){
     $(".space").text(indexPlantObject.plantSpace);
     $(".maintenance").text(indexPlantObject.plantMaintenance);
     $(".time").text(indexPlantObject.plantTime);
+    $(".companions").text(indexPlantObject.friend.join(', '));
     $("#plant-modal").modal("show");
   });
 
