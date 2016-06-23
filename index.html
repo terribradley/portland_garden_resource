@@ -4,17 +4,16 @@
     <meta charset="utf-8">
     <title>Portland Garden Resource</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-   <link href="css/styles.css" rel="stylesheet" type="text/css">
-   <script src="js/jquery-1.12.4.js"></script>
-   <script src="js/bootstrap.min.js"></script>
-   <script src="js/scripts.js"></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
   </head>
   <body>
-<!-- header -->
     <div class="jumbotron">
       <h1>Portland Garden Resource</h1>
     </div>
-<div class="container">
+    <div class="container">
     <!-- float left plant index -->
 <div id="plant-index">
 <h2>Vegetables</h2>
@@ -40,6 +39,7 @@
 </ul>
 <h2>Herbs/Flowers</h2>
 <ul class="clicked">
+
   <li id="basil">Basil</li>
   <li id="marigold">Marigold</li>
   <li id="parsley">Parsley</li>
@@ -47,7 +47,6 @@
   <li id="thyme">Thyme</li>
 </ul>
 </div>
-<!-- MODAL YOU WIN BELOW -->
  <div class="modal fade" id="plant-modal" tabindex="-1" role="dialog">
      <div class="modal-admin" role="document">
        <div class="modal-content">
@@ -77,12 +76,23 @@
 <h3>Choose a plant from the drop down. In the next drop down menu, it will show you a list companion plants that would be good to plant surrounding your original choice. It'll also help you plan the spacing in your garden bed.</h3>
 <div id="companion-plant">
   <div class="row">
+
     <div id="seedling-one" class="col-sm-4 ">
       <select class="form-control custom" id="dropdown1" name="">
         <option>Select a plant</option>
         <option value="tomato">tomato</option>
         <option value="beans">beans</option>
         <option value="marigold">marigold</option>
+      </select>
+    </div>
+    <div id="gardenbox-two" class="col-sm-4 ">
+      <select id="dropdown2">
+        <option>Choose a friend!</option>
+      </select>
+    </div>
+    <div id="gardenbox-three" class="col-sm-4 ">
+      <select id="dropdown3">
+        <option>Choose a friend!</option>
       </select>
     </div>
   </div>
