@@ -25,10 +25,6 @@ Web page that delivers information on garden plants and can match plants to user
 * Example Input: User selects Tomato from dropdown
 * Example Output: Marigold, Asparagus
 
-** 3. Deliver plants that match user parameters.**
-
-* Example Input: User chooses 4ft from Space property in Companion Growing app.  
-* Example Output: Plants requiring 4ft of growing space are displayed in Companion area.
 
 ## Support and contact details
 
